@@ -1,0 +1,119 @@
+{
+  "author": "WeiR-h",
+  "date": "2026-10-14",
+  "sourceType": "primary-manufacturer-and-government-snapshots",
+  "records": [
+    {
+      "sourceId": "cospowers-lfp-product",
+      "url": "https://www.cospowers.com/products/info/97/1619.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/cospowers-lfp.html",
+      "bytes": 31304,
+      "sha256": "24586744c1c03d17a7c4b956bc6df805be69ec08607ae8f7e84fa15a0d562569"
+    },
+    {
+      "sourceId": "cospowers-lfp-sheet",
+      "url": "https://www.cospowers.com/web/upload/2026/08/13/17866123138164tut9b.pdf",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/cospowers-lfp.pdf",
+      "bytes": 266975,
+      "sha256": "a9bf917b868588dfd51f7cdc59d1ed03d66579b6df12caae0c7933aac2102ebc"
+    },
+    {
+      "sourceId": "cospowers-na-product",
+      "url": "https://www.cospowers.com/products/info/136/1623.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/cospowers-na.html",
+      "bytes": 31060,
+      "sha256": "0e498cab4c0f61d08fba28738249c2b857b4adbdc854756a1fa30117d1f2fa44"
+    },
+    {
+      "sourceId": "cospowers-na-sheet",
+      "url": "https://www.cospowers.com/web/upload/2026/08/13/17866112719415eirh7.pdf",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/cospowers-na.pdf",
+      "bytes": 271595,
+      "sha256": "2d20343452d553a2630577f171ee542e30a1e4e32bea085572913b1c6e4add2e"
+    },
+    {
+      "sourceId": "delta-lbm-spec",
+      "url": "https://www.deltapowersolutions.com/en/mcis/lbm-series-ups-battery-system-specifications.php",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/delta-lbm-spec.html",
+      "bytes": 86626,
+      "sha256": "3ff5541275db7e49e4af6f7ab93c628a37d0a18f4258df4b8ae4d28bd3c4062e"
+    },
+    {
+      "sourceId": "delta-lbm-leaflet",
+      "url": "https://www.deltapowersolutions.com/media/download/Leaflet_UPS-Battery_LBM%20series_en_EKAICA-ESP-FH.pdf",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/delta-lbm-leaflet.pdf",
+      "bytes": 1053635,
+      "sha256": "312ca61b3455a5e3b70fc38c4421680413e3cdf9d009927bc640cff1d18ee7eb"
+    },
+    {
+      "sourceId": "highstar-aidc",
+      "url": "https://cn.highstar.com/companynews/352",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/highstar-aidc.html",
+      "bytes": 48883,
+      "sha256": "ed91f0adcc2a99965438818a67599990cbb2d3d682eb7ece1e0233a30279e5e2"
+    },
+    {
+      "sourceId": "highstar-cell",
+      "url": "https://cn.highstar.com/cell",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/highstar-cell.html",
+      "bytes": 45694,
+      "sha256": "d2e3dfd864165b850f6ea964fe46c8bd5bbf5cebdae2af44589c397a9b0c5db6"
+    },
+    {
+      "sourceId": "renqiu-na-award",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002004/20260915/db2166c9-a5c5-48e9-b6ba-bbcfc2670499.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-na-award.html",
+      "bytes": 43892,
+      "sha256": "21dd0c30d7afe3924dae771c713e2f9b9af9323b6a3d15569ca0996dea587685"
+    },
+    {
+      "sourceId": "renqiu-lfp-award",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002004/20260915/f9176493-3534-4e30-b3bf-8f74662fbc51.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-lfp-award.html",
+      "bytes": 43510,
+      "sha256": "591881e038a49a06932be805026c12a94bdfdfe6cd545e58ec1020a2b3428411"
+    },
+    {
+      "sourceId": "renqiu-na-tender",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260807/b89f4e40-80b7-4e3a-a727-4fc63e80fa21.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-na-tender.html",
+      "bytes": 61965,
+      "sha256": "7e527b71153b794e9164a8fd92936acc1475e0b21393aadcbf66e8d29e84b68f"
+    },
+    {
+      "sourceId": "renqiu-lfp-tender",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260807/2233b878-5252-4270-a3c0-859635d5de7b.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-lfp-tender.html",
+      "bytes": 62349,
+      "sha256": "651d76850f0bf3741ee69d2ad5c68c1cf2d68b2b2dfc6f7c4197b6f72773d0c8"
+    },
+    {
+      "sourceId": "renqiu-na-amendment",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260817/f5dd332f-4b72-4d9d-ac24-c400e2a36af1.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-na-revised-tender.html",
+      "bytes": 17376,
+      "sha256": "6bc9e5226d806fdcb72baa4705ac7ce113a6947222506aeca0ec639208e2cc7c"
+    },
+    {
+      "sourceId": "renqiu-lfp-amendment",
+      "url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260817/a12601dc-ef29-42e8-983c-3b3c64af44ae.html",
+      "retrievedOn": "2026-10-14",
+      "file": "sources/renqiu-lfp-revised-tender.html",
+      "bytes": 18283,
+      "sha256": "76d749923a081d3557e889d28aae1fb84655f0525d003147a188ba14599cf0ad"
+    }
+  ]
+}

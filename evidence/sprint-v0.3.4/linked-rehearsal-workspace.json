@@ -1,0 +1,1962 @@
+{
+  "schemaVersion": 2,
+  "projectId": "cmujvb96f000z3jo188jx0xjp",
+  "author": "WeiR-h",
+  "dataStatus": "rehearsal",
+  "sequence": 4,
+  "tasks": [
+    {
+      "id": "paired-quotes",
+      "title": "补齐同任务配对报价",
+      "question": "同一交流侧1MW、15分钟任务，分别取得LFP与钠电预算报价。",
+      "acceptance": "两份报价及型号明确；列明温度、寿命终点、含税范围、UPS/PCS和温控是否包含。",
+      "checks": [
+        "同任务及型号明确",
+        "来源与日期可追溯",
+        "供货边界和缺口已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "power-curves",
+      "title": "核对15分钟功率与低温条件",
+      "question": "澄清昆宇5/9柜初筛的测试工况，以及−30℃部署需要的条件。",
+      "acceptance": "厂商书面答复或测试报告，明确温度、寿命终点、直流/交流边界及柜数修正。",
+      "checks": [
+        "测试条件可追溯",
+        "目录矛盾已保留或解决",
+        "对柜数结论的影响已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "model-review",
+      "title": "独立复算经济模型",
+      "question": "复算需量费反例、备用约束、更换时点和现金流。",
+      "acceptance": "独立复算过程，保留输入、模型版本、差异与复核结果。",
+      "checks": [
+        "输入及版本已记录",
+        "复算过程可重复",
+        "差异及结论已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "monthly-load",
+      "title": "补充真实月度负荷与计费",
+      "question": "获取可分享的匿名15分钟负荷和一个完整月的计费依据。",
+      "acceptance": "明确数据授权、计费类型、记录时段、缺失数据和实际峰值；不公开客户敏感字段。",
+      "checks": [
+        "数据使用范围明确",
+        "负荷与账单口径一致",
+        "模型可用性及缺口已说明"
+      ],
+      "status": "accepted",
+      "claimant": "演练贡献者"
+    },
+    {
+      "id": "user-feedback",
+      "title": "验证一次实际使用需求",
+      "question": "请AIDC业主或集成商试用选型比较，并记录实际用途。",
+      "acceptance": "可引用的使用反馈，说明是否影响选型、减少重复计价或发现约束。",
+      "checks": [
+        "反馈来源及授权明确",
+        "具体用途与结果明确",
+        "付费意向与实际收入分开记录"
+      ],
+      "status": "open",
+      "claimant": null
+    }
+  ],
+  "contributions": [
+    {
+      "id": "contribution-2",
+      "taskId": "monthly-load",
+      "contributor": "演练贡献者",
+      "revision": 1,
+      "question": "获取可分享的匿名15分钟负荷和一个完整月的计费依据。",
+      "summary": "合成样例回放验证，非现场资料",
+      "source": "https://1836.online/projects/cmujvb96f000z3jo188jx0xjp",
+      "impact": "仅验证资料质检、复算关联与摘要，非外部共建",
+      "modelVersion": "0.2.0",
+      "shareAllowed": true,
+      "status": "accepted",
+      "submittedAt": "2026-10-16T12:00:00.000Z",
+      "reviews": [
+        {
+          "reviewer": "演练复核者",
+          "decision": "accept",
+          "checks": [
+            true,
+            true,
+            true
+          ],
+          "note": "合成样例的软件复核，非真实独立验证",
+          "at": "2026-10-16T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "pointRecords": [],
+  "commercialEntries": [],
+  "events": [
+    {
+      "id": "event-1",
+      "kind": "claim",
+      "actor": "演练贡献者",
+      "detail": "monthly-load",
+      "at": "2026-10-16T12:00:00.000Z"
+    },
+    {
+      "id": "event-2",
+      "kind": "submit",
+      "actor": "演练贡献者",
+      "detail": "contribution-2",
+      "at": "2026-10-16T12:00:00.000Z"
+    },
+    {
+      "id": "event-3",
+      "kind": "analysis-link",
+      "actor": "演练贡献者",
+      "detail": "analysis-3",
+      "at": "2026-10-16T12:00:00.000Z"
+    },
+    {
+      "id": "event-4",
+      "kind": "review",
+      "actor": "演练复核者",
+      "detail": "contribution-2:accept",
+      "at": "2026-10-16T12:00:00.000Z"
+    }
+  ],
+  "analysisRecords": [
+    {
+      "id": "analysis-3",
+      "contributionId": "contribution-2",
+      "recordedBy": "演练贡献者",
+      "recordedAt": "2026-10-16T12:00:00.000Z",
+      "analysis": {
+        "schemaVersion": 1,
+        "modelVersion": "0.2.0",
+        "kind": "observed-day",
+        "classification": "sample",
+        "source": {
+          "description": "内置合成样例，非现场资料",
+          "shareScope": "summary",
+          "date": "2026-10-11",
+          "timezone": "Asia/Shanghai",
+          "quality": {
+            "rows": 96,
+            "startDate": "2026-10-10",
+            "endDate": "2026-10-13",
+            "completeDays": 2,
+            "missingHours": 1,
+            "duplicates": 1,
+            "invalidValues": 0,
+            "invalidTimestamps": 0,
+            "nonHourly": 0,
+            "outOfOrder": 0,
+            "issuePreviewLimit": 100
+          }
+        },
+        "baselineScenario": {
+          "schemaVersion": 1,
+          "title": "不计需量费用",
+          "preset": "custom",
+          "interpretation": "common",
+          "provenance": {
+            "classification": "demonstration",
+            "researchDate": "2026-10-14",
+            "description": "除官方题设外均为演示假设；无真实AIDC运行数据或同口径产品报价。"
+          },
+          "common": {
+            "ratedPowerKw": 1000,
+            "targetDeliveryKWh": 2000,
+            "backupMinutes": 15,
+            "projectYears": 20,
+            "discountRate": 0.05,
+            "operatingDays": 365,
+            "designTemperatureC": -30,
+            "depthOfDischarge": 0.9,
+            "endOfLifeFraction": 0.8,
+            "lifeTestDoD": 0.9,
+            "chargeUntilHour": 8,
+            "gridImportLimitKw": 2200,
+            "monthlyDemandRate": 0,
+            "dispatchPolicy": "min-peak",
+            "pcsPricePerKw": 200,
+            "pcsLifeYears": 15,
+            "otherInitialCost": 180000,
+            "replacementFixedCost": 20000,
+            "decommissionCost": 20000,
+            "residualValue": 0
+          },
+          "batteries": [
+            {
+              "id": "sodium",
+              "name": "钠电",
+              "pricePerKWh": 700,
+              "replacementPricePerKWh": 500,
+              "roundTripEfficiency": 0.9,
+              "calendarLifeYears": 15,
+              "cycleLife": 15000,
+              "coldCapacityFactor": 0.9,
+              "dischargeC": 0.5,
+              "chargeC": 0.5,
+              "annualOM": 20000,
+              "auxKWhPerDay": 32
+            },
+            {
+              "id": "lfp",
+              "name": "磷酸铁锂",
+              "pricePerKWh": 700,
+              "replacementPricePerKWh": 500,
+              "roundTripEfficiency": 0.9,
+              "calendarLifeYears": 15,
+              "cycleLife": 6000,
+              "coldCapacityFactor": 0.9,
+              "dischargeC": 0.5,
+              "chargeC": 0.5,
+              "annualOM": 20000,
+              "auxKWhPerDay": 32
+            }
+          ],
+          "profile": {
+            "kind": "synthetic",
+            "description": "24小时演示日，重复用于年度测算；没有模拟全年天气。",
+            "hours": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 16,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 17,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 18,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 19,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 20,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 21,
+                "price": 0.85,
+                "loadKw": 1000
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1000
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1000
+              }
+            ]
+          }
+        },
+        "scenario": {
+          "schemaVersion": 1,
+          "title": "合成样例 2026-10-11 单日回放",
+          "preset": "custom",
+          "interpretation": "common",
+          "provenance": {
+            "classification": "sample-validation",
+            "source": "内置合成样例，非现场资料",
+            "shareScope": "summary",
+            "calibratedFields": [
+              "profile.hours.loadKw",
+              "profile.hours.price"
+            ],
+            "description": "仅替换负荷与电价，其他电池性能、报价和寿命参数仍沿用基线假设。"
+          },
+          "common": {
+            "ratedPowerKw": 1000,
+            "targetDeliveryKWh": 2000,
+            "backupMinutes": 15,
+            "projectYears": 20,
+            "discountRate": 0.05,
+            "operatingDays": 365,
+            "designTemperatureC": -30,
+            "depthOfDischarge": 0.9,
+            "endOfLifeFraction": 0.8,
+            "lifeTestDoD": 0.9,
+            "chargeUntilHour": 8,
+            "gridImportLimitKw": 2200,
+            "monthlyDemandRate": 0,
+            "dispatchPolicy": "min-peak",
+            "pcsPricePerKw": 200,
+            "pcsLifeYears": 15,
+            "otherInitialCost": 180000,
+            "replacementFixedCost": 20000,
+            "decommissionCost": 20000,
+            "residualValue": 0
+          },
+          "batteries": [
+            {
+              "id": "sodium",
+              "name": "钠电",
+              "pricePerKWh": 700,
+              "replacementPricePerKWh": 500,
+              "roundTripEfficiency": 0.9,
+              "calendarLifeYears": 15,
+              "cycleLife": 15000,
+              "coldCapacityFactor": 0.9,
+              "dischargeC": 0.5,
+              "chargeC": 0.5,
+              "annualOM": 20000,
+              "auxKWhPerDay": 32
+            },
+            {
+              "id": "lfp",
+              "name": "磷酸铁锂",
+              "pricePerKWh": 700,
+              "replacementPricePerKWh": 500,
+              "roundTripEfficiency": 0.9,
+              "calendarLifeYears": 15,
+              "cycleLife": 6000,
+              "coldCapacityFactor": 0.9,
+              "dischargeC": 0.5,
+              "chargeC": 0.5,
+              "annualOM": 20000,
+              "auxKWhPerDay": 32
+            }
+          ],
+          "profile": {
+            "kind": "synthetic",
+            "description": "2026-10-11 Asia/Shanghai；内置合成样例，非现场资料；仅当日分析，来源由用户声明。",
+            "hours": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 16,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 17,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 18,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 19,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 20,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 21,
+                "price": 0.75,
+                "loadKw": 1100
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1100
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1100
+              }
+            ]
+          }
+        },
+        "before": [
+          {
+            "id": "sodium",
+            "name": "钠电",
+            "feasible": true,
+            "nominalKWh": 3660.0435881578455,
+            "deliveredACKWh": 1999.9999999999995,
+            "reserveACKWh": 250,
+            "gridPeakKw": 1279.111111111111,
+            "chargingCostRMB": 666.6666666666663,
+            "auxiliaryCostRMB": 17.333333333333332,
+            "avoidedCostRMB": 1699.9999999999995,
+            "energyBalance": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 263.523138347365,
+                "storedAfterDC": 527.0462766947298,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.3,
+                "energyBalanceError": -5.684341886080802e-14
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 527.0462766947298,
+                "storedAfterDC": 790.5694150420948,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.39999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 790.5694150420948,
+                "storedAfterDC": 1054.0925533894597,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1054.0925533894597,
+                "storedAfterDC": 1317.6156917368246,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.6,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1317.6156917368246,
+                "storedAfterDC": 1581.1388300841895,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1581.1388300841895,
+                "storedAfterDC": 1844.6619684315544,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7999999999999999,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1844.6619684315544,
+                "storedAfterDC": 2108.1851067789194,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.1111111111102,
+                "storedBeforeDC": 2108.1851067789194,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 5.684341886080802e-14
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 16,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 1000,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1.3333333333333712,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 1317.6156917368237,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5999999999999996,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 17,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 999.9999999999995,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1.333333333333826,
+                "storedBeforeDC": 1317.6156917368237,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 18,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 19,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 20,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 21,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              }
+            ]
+          },
+          {
+            "id": "lfp",
+            "name": "磷酸铁锂",
+            "feasible": true,
+            "nominalKWh": 3660.0435881578455,
+            "deliveredACKWh": 1999.9999999999995,
+            "reserveACKWh": 250,
+            "gridPeakKw": 1279.111111111111,
+            "chargingCostRMB": 666.6666666666663,
+            "auxiliaryCostRMB": 17.333333333333332,
+            "avoidedCostRMB": 1699.9999999999995,
+            "energyBalance": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 263.523138347365,
+                "storedAfterDC": 527.0462766947298,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.3,
+                "energyBalanceError": -5.684341886080802e-14
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 527.0462766947298,
+                "storedAfterDC": 790.5694150420948,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.39999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 790.5694150420948,
+                "storedAfterDC": 1054.0925533894597,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1054.0925533894597,
+                "storedAfterDC": 1317.6156917368246,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.6,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1317.6156917368246,
+                "storedAfterDC": 1581.1388300841895,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1581.1388300841895,
+                "storedAfterDC": 1844.6619684315544,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7999999999999999,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1844.6619684315544,
+                "storedAfterDC": 2108.1851067789194,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.1111111111102,
+                "storedBeforeDC": 2108.1851067789194,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 5.684341886080802e-14
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 16,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 1000,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1.3333333333333712,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 1317.6156917368237,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5999999999999996,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 17,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 999.9999999999995,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1.333333333333826,
+                "storedBeforeDC": 1317.6156917368237,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 18,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 19,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 20,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 21,
+                "price": 0.85,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1000,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1001.3333333333334,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "id": "sodium",
+            "name": "钠电",
+            "feasible": true,
+            "nominalKWh": 3660.0435881578455,
+            "deliveredACKWh": 1999.9999999999995,
+            "reserveACKWh": 250,
+            "gridPeakKw": 1279.111111111111,
+            "chargingCostRMB": 666.6666666666663,
+            "auxiliaryCostRMB": 16.533333333333335,
+            "avoidedCostRMB": 1499.9999999999995,
+            "energyBalance": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 263.523138347365,
+                "storedAfterDC": 527.0462766947298,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.3,
+                "energyBalanceError": -5.684341886080802e-14
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 527.0462766947298,
+                "storedAfterDC": 790.5694150420948,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.39999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 790.5694150420948,
+                "storedAfterDC": 1054.0925533894597,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1054.0925533894597,
+                "storedAfterDC": 1317.6156917368246,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.6,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1317.6156917368246,
+                "storedAfterDC": 1581.1388300841895,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1581.1388300841895,
+                "storedAfterDC": 1844.6619684315544,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7999999999999999,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1844.6619684315544,
+                "storedAfterDC": 2108.1851067789194,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.1111111111102,
+                "storedBeforeDC": 2108.1851067789194,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 5.684341886080802e-14
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 16,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 1000,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 101.33333333333326,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 1317.6156917368237,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5999999999999996,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 17,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 999.9999999999995,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 101.33333333333371,
+                "storedBeforeDC": 1317.6156917368237,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 18,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 19,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 20,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 21,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              }
+            ]
+          },
+          {
+            "id": "lfp",
+            "name": "磷酸铁锂",
+            "feasible": true,
+            "nominalKWh": 3660.0435881578455,
+            "deliveredACKWh": 1999.9999999999995,
+            "reserveACKWh": 250,
+            "gridPeakKw": 1279.111111111111,
+            "chargingCostRMB": 666.6666666666663,
+            "auxiliaryCostRMB": 16.533333333333335,
+            "avoidedCostRMB": 1499.9999999999995,
+            "energyBalance": [
+              {
+                "hour": 0,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 263.523138347365,
+                "storedAfterDC": 527.0462766947298,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.3,
+                "energyBalanceError": -5.684341886080802e-14
+              },
+              {
+                "hour": 1,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 527.0462766947298,
+                "storedAfterDC": 790.5694150420948,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.39999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 2,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 790.5694150420948,
+                "storedAfterDC": 1054.0925533894597,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 3,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1054.0925533894597,
+                "storedAfterDC": 1317.6156917368246,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.6,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 4,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1317.6156917368246,
+                "storedAfterDC": 1581.1388300841895,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 5,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1581.1388300841895,
+                "storedAfterDC": 1844.6619684315544,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.7999999999999999,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 6,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.77777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.111111111111,
+                "storedBeforeDC": 1844.6619684315544,
+                "storedAfterDC": 2108.1851067789194,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 7,
+                "price": 0.3,
+                "loadKw": 1000,
+                "chargeGridKWh": 277.777777777777,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1279.1111111111102,
+                "storedBeforeDC": 2108.1851067789194,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 5.684341886080802e-14
+              },
+              {
+                "hour": 8,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 9,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 10,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 11,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 12,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 13,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 14,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 15,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 2371.7082451262836,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.9999999999999997,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 16,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 1000,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 101.33333333333326,
+                "storedBeforeDC": 2371.7082451262836,
+                "storedAfterDC": 1317.6156917368237,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.5999999999999996,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 17,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 999.9999999999995,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 101.33333333333371,
+                "storedBeforeDC": 1317.6156917368237,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 18,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 19,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 20,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 21,
+                "price": 0.75,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 22,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              },
+              {
+                "hour": 23,
+                "price": 0.55,
+                "loadKw": 1100,
+                "chargeGridKWh": 0,
+                "deliveredACKWh": 0,
+                "auxGridKWh": 1.3333333333333333,
+                "gridImportKWh": 1101.3333333333333,
+                "storedBeforeDC": 263.52313834736447,
+                "storedAfterDC": 263.52313834736447,
+                "reserveDC": 263.523138347365,
+                "socFraction": 0.1999999999999998,
+                "energyBalanceError": 0
+              }
+            ]
+          }
+        ],
+        "scope": "仅对应样本日；不含真实月需量结算或真实年度/20年收益；产品参数仍为假设。"
+      }
+    }
+  ],
+  "scope": {
+    "storage": "local",
+    "platformSync": false,
+    "authenticatedIdentity": false,
+    "settlement": false
+  }
+}

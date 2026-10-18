@@ -1,0 +1,15 @@
+{
+  "modelVersion": "0.2.0",
+  "files": [
+    {
+      "file": "src/model/economics.mjs",
+      "sha256": "eae3c645559dfe3c051b5b046cf2f28edc8e271b2714816886e670a5d98c69c7",
+      "byteIdenticalToReleased030": true
+    },
+    {
+      "file": "src/model/scenario.mjs",
+      "sha256": "12f6d1de0fa19f46097aa12ed30a6073731e6afc63158cbcc687920ec8e9550a",
+      "byteIdenticalToReleased030": true
+    }
+  ]
+}

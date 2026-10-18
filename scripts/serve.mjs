@@ -1,0 +1,12 @@
+import http from 'node:http';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..','dist');
+const index=process.argv.indexOf('--port');
+const port=index>=0?Number(process.argv[index+1]):4176;
+if(!Number.isInteger(port)||port<1024||port>65535)throw new Error('端口需要是1024—65535的整数');
+const types={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.json':'application/json; charset=utf-8'};
+await fs.access(path.join(root,'index.html'));
+const server=http.createServer(async(req,res)=>{try{if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return;}const pathname=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}const bytes=await fs.readFile(file);res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"});res.end(req.method==='HEAD'?undefined:bytes);}catch{res.writeHead(404);res.end('Not found');}});
+server.listen(port,'127.0.0.1',()=>console.log(`钠电经济试验台 http://127.0.0.1:${port}`));
+server.on('error',error=>{console.error(error.code==='EADDRINUSE'?'端口已占用，请用 --port 指定其他端口。':error.message);process.exitCode=1;});

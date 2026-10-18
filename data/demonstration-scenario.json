@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "title": "寒冷地区AIDC园区",
+  "preset": "cold",
+  "interpretation": "common",
+  "provenance": {
+    "classification": "demonstration",
+    "researchDate": "2026-10-14",
+    "description": "除官方题设外均为演示假设；无真实AIDC运行数据或同口径产品报价。"
+  },
+  "common": {
+    "ratedPowerKw": 1000,
+    "targetDeliveryKWh": 2000,
+    "backupMinutes": 15,
+    "projectYears": 20,
+    "discountRate": 0.05,
+    "operatingDays": 365,
+    "designTemperatureC": -30,
+    "depthOfDischarge": 0.9,
+    "endOfLifeFraction": 0.8,
+    "lifeTestDoD": 0.9,
+    "chargeUntilHour": 8,
+    "gridImportLimitKw": 2200,
+    "monthlyDemandRate": 0,
+    "dispatchPolicy": "energy-first",
+    "pcsPricePerKw": 200,
+    "pcsLifeYears": 15,
+    "otherInitialCost": 180000,
+    "replacementFixedCost": 20000,
+    "decommissionCost": 20000,
+    "residualValue": 0
+  },
+  "batteries": [
+    {
+      "id": "sodium",
+      "name": "钠电",
+      "pricePerKWh": 700,
+      "replacementPricePerKWh": 500,
+      "roundTripEfficiency": 0.9,
+      "calendarLifeYears": 15,
+      "cycleLife": 15000,
+      "coldCapacityFactor": 0.9,
+      "dischargeC": 0.5,
+      "chargeC": 0.5,
+      "annualOM": 20000,
+      "auxKWhPerDay": 32
+    },
+    {
+      "id": "lfp",
+      "name": "磷酸铁锂",
+      "pricePerKWh": 700,
+      "replacementPricePerKWh": 500,
+      "roundTripEfficiency": 0.9,
+      "calendarLifeYears": 15,
+      "cycleLife": 6000,
+      "coldCapacityFactor": 0.9,
+      "dischargeC": 0.5,
+      "chargeC": 0.5,
+      "annualOM": 20000,
+      "auxKWhPerDay": 32
+    }
+  ],
+  "profile": {
+    "kind": "synthetic",
+    "description": "24小时演示日，重复用于年度测算；没有模拟全年天气。",
+    "hours": [
+      {
+        "hour": 0,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 1,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 2,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 3,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 4,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 5,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 6,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 7,
+        "price": 0.3,
+        "loadKw": 1000
+      },
+      {
+        "hour": 8,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 9,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 10,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 11,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 12,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 13,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 14,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 15,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 16,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 17,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 18,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 19,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 20,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 21,
+        "price": 0.85,
+        "loadKw": 1000
+      },
+      {
+        "hour": 22,
+        "price": 0.55,
+        "loadKw": 1000
+      },
+      {
+        "hour": 23,
+        "price": 0.55,
+        "loadKw": 1000
+      }
+    ]
+  }
+}

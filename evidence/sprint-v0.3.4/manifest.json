@@ -1,0 +1,58 @@
+{
+  "toolVersion": "0.3.4",
+  "modelVersion": "0.2.0",
+  "researchRevision": "v1.3",
+  "roadshowRevision": "v1.4",
+  "author": "WeiR-h",
+  "classification": "synthetic-software-validation-not-field-research",
+  "realFieldDatasets": 0,
+  "realIndependentReviews": 0,
+  "realOperatingIncomeRMB": 0,
+  "sampleQuality": {
+    "rows": 96,
+    "startDate": "2026-10-10",
+    "endDate": "2026-10-13",
+    "completeDays": 2,
+    "missingHours": 1,
+    "duplicates": 1,
+    "invalidValues": 0,
+    "invalidTimestamps": 0,
+    "nonHourly": 0,
+    "outOfOrder": 0,
+    "issuePreviewLimit": 100
+  },
+  "files": [
+    {
+      "file": "linked-rehearsal-workspace.json",
+      "sha256": "eb35602937fdbbb246e4efb288f04f73f7f62e1832e2972514e30a05730faa19"
+    },
+    {
+      "file": "mixed-demand-40-peak.json",
+      "sha256": "6ceba289d22abd1f492def645572769cf1cff1a4941e5ea5acfefe91b11ab330"
+    },
+    {
+      "file": "mixed-no-demand.json",
+      "sha256": "2bdc0719d66f3d5e6b49b2f5a199869a7681f2bd1ec5a3ddd7a665f0ded41539"
+    },
+    {
+      "file": "sample-community-summary.md",
+      "sha256": "fb1f949de8b8bb47f108926e1ce3d26316604856be2fe5bf4fe47692ffba7131"
+    },
+    {
+      "file": "sample-day-replay.json",
+      "sha256": "df478bfac3661ffb5c1a47d508bc47d5976fb32d67ef0672e7c7f2347be4ed38"
+    },
+    {
+      "file": "sample-quality.json",
+      "sha256": "02753d121b63ab7ba7607277569ad7ab694c7aaf69559e5ed0d611ae49c086d9"
+    },
+    {
+      "file": "submitted-rehearsal-workspace.json",
+      "sha256": "cc25474ed6291f7cfd68e5249dfc840b11a91a6e17248e832fb29a68308e1560"
+    },
+    {
+      "file": "tight-window.json",
+      "sha256": "61744c85474fc4c13cc87178831ddc89d282bab3540ff6325658c6d6d7df280d"
+    }
+  ]
+}

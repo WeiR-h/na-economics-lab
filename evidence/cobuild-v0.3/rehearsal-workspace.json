@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "projectId": "cmujvb96f000z3jo188jx0xjp",
+  "author": "WeiR-h",
+  "dataStatus": "rehearsal",
+  "sequence": 11,
+  "tasks": [
+    {
+      "id": "paired-quotes",
+      "title": "补齐同任务配对报价",
+      "question": "同一交流侧1MW、15分钟任务，分别取得LFP与钠电预算报价。",
+      "acceptance": "两份报价及型号明确；列明温度、寿命终点、含税范围、UPS/PCS和温控是否包含。",
+      "checks": [
+        "同任务及型号明确",
+        "来源与日期可追溯",
+        "供货边界和缺口已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "power-curves",
+      "title": "核对15分钟功率与低温条件",
+      "question": "澄清昆宇5/9柜初筛的测试工况，以及−30℃部署需要的条件。",
+      "acceptance": "厂商书面答复或测试报告，明确温度、寿命终点、直流/交流边界及柜数修正。",
+      "checks": [
+        "测试条件可追溯",
+        "目录矛盾已保留或解决",
+        "对柜数结论的影响已说明"
+      ],
+      "status": "accepted",
+      "claimant": "演练贡献者乙"
+    },
+    {
+      "id": "model-review",
+      "title": "独立复算经济模型",
+      "question": "复算需量费反例、备用约束、更换时点和现金流。",
+      "acceptance": "独立复算过程，保留输入、模型版本、差异与复核结果。",
+      "checks": [
+        "输入及版本已记录",
+        "复算过程可重复",
+        "差异及结论已说明"
+      ],
+      "status": "accepted",
+      "claimant": "演练贡献者甲"
+    },
+    {
+      "id": "monthly-load",
+      "title": "补充真实月度负荷与计费",
+      "question": "获取可分享的匿名15分钟负荷和一个完整月的计费依据。",
+      "acceptance": "明确数据授权、计费类型、记录时段、缺失数据和实际峰值；不公开客户敏感字段。",
+      "checks": [
+        "数据使用范围明确",
+        "负荷与账单口径一致",
+        "模型可用性及缺口已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "user-feedback",
+      "title": "验证一次实际使用需求",
+      "question": "请AIDC业主或集成商试用选型比较，并记录实际用途。",
+      "acceptance": "可引用的使用反馈，说明是否影响选型、减少重复计价或发现约束。",
+      "checks": [
+        "反馈来源及授权明确",
+        "具体用途与结果明确",
+        "付费意向与实际收入分开记录"
+      ],
+      "status": "open",
+      "claimant": null
+    }
+  ],
+  "contributions": [
+    {
+      "id": "contribution-2",
+      "taskId": "model-review",
+      "contributor": "演练贡献者甲",
+      "revision": 1,
+      "question": "复算需量费反例、备用约束、更换时点和现金流。",
+      "summary": "本地流程演练夹具，不代表外部证据或真实共建。",
+      "source": "https://1836.online/points-and-revenue",
+      "impact": "检查共建状态与分配算法，经济模型参数未更改。",
+      "modelVersion": "0.2.0",
+      "shareAllowed": true,
+      "status": "accepted",
+      "submittedAt": "2026-10-14T08:00:00.000Z",
+      "reviews": [
+        {
+          "reviewer": "演练复核者",
+          "decision": "accept",
+          "checks": [
+            true,
+            true,
+            true
+          ],
+          "note": "本地演练复核，不是实际独立验证。",
+          "at": "2026-10-14T08:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "contribution-6",
+      "taskId": "power-curves",
+      "contributor": "演练贡献者乙",
+      "revision": 1,
+      "question": "澄清昆宇5/9柜初筛的测试工况，以及−30℃部署需要的条件。",
+      "summary": "本地流程演练夹具，不代表外部证据或真实共建。",
+      "source": "https://1836.online/points-and-revenue",
+      "impact": "检查共建状态与分配算法，经济模型参数未更改。",
+      "modelVersion": "0.2.0",
+      "shareAllowed": true,
+      "status": "accepted",
+      "submittedAt": "2026-10-14T08:00:00.000Z",
+      "reviews": [
+        {
+          "reviewer": "演练复核者",
+          "decision": "accept",
+          "checks": [
+            true,
+            true,
+            true
+          ],
+          "note": "本地演练复核，不是实际独立验证。",
+          "at": "2026-10-14T08:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "pointRecords": [
+    {
+      "id": "points-4",
+      "contributionId": "contribution-2",
+      "projectId": "cmujvb96f000z3jo188jx0xjp",
+      "contributor": "演练贡献者甲",
+      "pointsMicro": 1000000,
+      "reference": "https://1836.online/points-and-revenue",
+      "recordedBy": "演练登记者",
+      "at": "2026-10-14T08:00:00.000Z",
+      "active": true,
+      "verification": "manual-reference-not-api-verified"
+    },
+    {
+      "id": "points-8",
+      "contributionId": "contribution-6",
+      "projectId": "cmujvb96f000z3jo188jx0xjp",
+      "contributor": "演练贡献者乙",
+      "pointsMicro": 3000000,
+      "reference": "https://1836.online/points-and-revenue",
+      "recordedBy": "演练登记者",
+      "at": "2026-10-14T08:00:00.000Z",
+      "active": true,
+      "verification": "manual-reference-not-api-verified"
+    }
+  ],
+  "commercialEntries": [
+    {
+      "id": "business-9",
+      "kind": "income",
+      "status": "recorded",
+      "initialStatus": "pending",
+      "amountCents": 10000,
+      "memo": "演练收入，未实际发生",
+      "reference": "REHEARSAL-PENDING",
+      "recordedBy": "演练登记者",
+      "at": "2026-10-14T08:00:00.000Z",
+      "confirmedAt": "2026-10-14T08:00:00.000Z",
+      "confirmedBy": "演练确认人",
+      "occurrenceReference": "REHEARSAL-ONLY-NOT-RECEIPT"
+    },
+    {
+      "id": "business-11",
+      "kind": "expense",
+      "status": "recorded",
+      "initialStatus": "recorded",
+      "amountCents": 2000,
+      "memo": "演练费用，非实际账单",
+      "reference": "REHEARSAL-ONLY-NOT-RECEIPT",
+      "recordedBy": "演练登记者",
+      "at": "2026-10-14T08:00:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-1",
+      "kind": "claim",
+      "actor": "演练贡献者甲",
+      "detail": "model-review",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-2",
+      "kind": "submit",
+      "actor": "演练贡献者甲",
+      "detail": "contribution-2",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-3",
+      "kind": "review",
+      "actor": "演练复核者",
+      "detail": "contribution-2:accept",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-4",
+      "kind": "points-record",
+      "actor": "演练登记者",
+      "detail": "points-4",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-5",
+      "kind": "claim",
+      "actor": "演练贡献者乙",
+      "detail": "power-curves",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-6",
+      "kind": "submit",
+      "actor": "演练贡献者乙",
+      "detail": "contribution-6",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-7",
+      "kind": "review",
+      "actor": "演练复核者",
+      "detail": "contribution-6:accept",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-8",
+      "kind": "points-record",
+      "actor": "演练登记者",
+      "detail": "points-8",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-9",
+      "kind": "business-record",
+      "actor": "演练登记者",
+      "detail": "business-9",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-10",
+      "kind": "business-confirmed",
+      "actor": "演练确认人",
+      "detail": "business-9",
+      "at": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "id": "event-11",
+      "kind": "business-record",
+      "actor": "演练登记者",
+      "detail": "business-11",
+      "at": "2026-10-14T08:00:00.000Z"
+    }
+  ],
+  "scope": {
+    "storage": "local",
+    "platformSync": false,
+    "authenticatedIdentity": false,
+    "settlement": false
+  }
+}

@@ -1,0 +1,2178 @@
+{
+  "modelVersion": "0.2.0",
+  "researchDate": "2026-10-14",
+  "scenario": {
+    "schemaVersion": 1,
+    "title": "寒冷地区AIDC园区",
+    "preset": "cold",
+    "interpretation": "common",
+    "provenance": {
+      "classification": "demonstration",
+      "researchDate": "2026-10-14",
+      "description": "除官方题设外均为演示假设；无真实AIDC运行数据或同口径产品报价。"
+    },
+    "common": {
+      "ratedPowerKw": 1000,
+      "targetDeliveryKWh": 2000,
+      "backupMinutes": 15,
+      "projectYears": 20,
+      "discountRate": 0.05,
+      "operatingDays": 365,
+      "designTemperatureC": -30,
+      "depthOfDischarge": 0.9,
+      "endOfLifeFraction": 0.8,
+      "lifeTestDoD": 0.9,
+      "chargeUntilHour": 8,
+      "gridImportLimitKw": 2200,
+      "monthlyDemandRate": 0,
+      "dispatchPolicy": "energy-first",
+      "pcsPricePerKw": 200,
+      "pcsLifeYears": 15,
+      "otherInitialCost": 180000,
+      "replacementFixedCost": 20000,
+      "decommissionCost": 20000,
+      "residualValue": 0
+    },
+    "batteries": [
+      {
+        "id": "sodium",
+        "name": "钠电",
+        "pricePerKWh": 700,
+        "replacementPricePerKWh": 500,
+        "roundTripEfficiency": 0.9,
+        "calendarLifeYears": 15,
+        "cycleLife": 15000,
+        "coldCapacityFactor": 0.9,
+        "dischargeC": 0.5,
+        "chargeC": 0.5,
+        "annualOM": 20000,
+        "auxKWhPerDay": 32
+      },
+      {
+        "id": "lfp",
+        "name": "磷酸铁锂",
+        "pricePerKWh": 700,
+        "replacementPricePerKWh": 500,
+        "roundTripEfficiency": 0.9,
+        "calendarLifeYears": 15,
+        "cycleLife": 6000,
+        "coldCapacityFactor": 0.9,
+        "dischargeC": 0.5,
+        "chargeC": 0.5,
+        "annualOM": 20000,
+        "auxKWhPerDay": 32
+      }
+    ],
+    "profile": {
+      "kind": "synthetic",
+      "description": "24小时演示日，重复用于年度测算；没有模拟全年天气。",
+      "hours": [
+        {
+          "hour": 0,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 1,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 2,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 3,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 4,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 5,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 6,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 7,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 8,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 9,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 10,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 11,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 12,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 13,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 14,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 15,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 16,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 17,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 18,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 19,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 20,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 21,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 22,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 23,
+          "price": 0.55,
+          "loadKw": 1000
+        }
+      ]
+    }
+  },
+  "result": {
+    "modelVersion": "0.2.0",
+    "interpretation": "common",
+    "systems": [
+      {
+        "id": "sodium",
+        "name": "钠电",
+        "battery": {
+          "id": "sodium",
+          "name": "钠电",
+          "pricePerKWh": 700,
+          "replacementPricePerKWh": 500,
+          "roundTripEfficiency": 0.9,
+          "calendarLifeYears": 15,
+          "cycleLife": 15000,
+          "coldCapacityFactor": 0.9,
+          "dischargeC": 0.5,
+          "chargeC": 0.5,
+          "annualOM": 20000,
+          "auxKWhPerDay": 32
+        },
+        "day": {
+          "nominalKWh": 3660.0435881578455,
+          "energySizingKWh": 3660.0435881578455,
+          "powerSizingKWh": 2928.034870526277,
+          "sizingConstraint": "energy",
+          "availableDC": 2635.231383473649,
+          "reserveAC": 250,
+          "reserveDC": 263.523138347365,
+          "eta": 0.9486832980505138,
+          "hours": [
+            {
+              "hour": 0,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 1000,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 2001.3333333333333,
+              "storedBeforeDC": 263.523138347365,
+              "storedAfterDC": 1212.2064363978786,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.56,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 1,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 1000,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 2001.3333333333333,
+              "storedBeforeDC": 1212.2064363978786,
+              "storedAfterDC": 2160.889734448392,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9199999999999999,
+              "energyBalanceError": -2.2737367544323206e-13
+            },
+            {
+              "hour": 2,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 222.22222222222172,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1223.555555555555,
+              "storedBeforeDC": 2160.889734448392,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 3,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 4,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 5,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 6,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 7,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 8,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 9,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 10,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 11,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 12,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 13,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 14,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 15,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 16,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 1000,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1.3333333333333712,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 1317.6156917368237,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.5999999999999996,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 17,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 999.9999999999995,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1.333333333333826,
+              "storedBeforeDC": 1317.6156917368237,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 18,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 19,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 20,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 21,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 22,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 23,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            }
+          ],
+          "deliveredAC": 1999.9999999999995,
+          "chargedGrid": 2222.2222222222217,
+          "chargingGridCap": 2200,
+          "baselinePeakKw": 1000,
+          "gridPeakKw": 2001.3333333333333,
+          "incrementalPeakKw": 1001.3333333333333,
+          "chargeCost": 666.6666666666665,
+          "avoidedCost": 1699.9999999999995,
+          "auxCost": 17.333333333333332,
+          "feasible": true,
+          "warnings": []
+        },
+        "annualTestCycles": 233.60000000000002,
+        "cycleYears": 64.21232876712328,
+        "replacementBinding": "calendar",
+        "replacementInterval": 15,
+        "events": [
+          {
+            "type": "battery",
+            "timeYears": 15,
+            "cost": 1850021.7940789228
+          },
+          {
+            "type": "pcs",
+            "timeYears": 15,
+            "cost": 200000
+          }
+        ],
+        "yearly": [
+          {
+            "year": 1,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 256819.04761904755,
+            "benefitPV": 590952.3809523808,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3198932.892662873
+          },
+          {
+            "year": 2,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 244589.56916099766,
+            "benefitPV": 562811.7913832199,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3443522.461823871
+          },
+          {
+            "year": 3,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 232942.44681999777,
+            "benefitPV": 536011.2298887807,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3676464.9086438688
+          },
+          {
+            "year": 4,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 221849.9493523788,
+            "benefitPV": 510486.88560836256,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3898314.8579962477
+          },
+          {
+            "year": 5,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 211285.66604988454,
+            "benefitPV": 486177.9862936786,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4109600.5240461323
+          },
+          {
+            "year": 6,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 201224.4438570329,
+            "benefitPV": 463026.65361302724,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4310824.967903165
+          },
+          {
+            "year": 7,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 191642.32748288848,
+            "benefitPV": 440977.7653457402,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4502467.295386054
+          },
+          {
+            "year": 8,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 182516.5023646557,
+            "benefitPV": 419978.8241388002,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4684983.79775071
+          },
+          {
+            "year": 9,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 173825.24034729114,
+            "benefitPV": 399979.832513143,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4858809.038098001
+          },
+          {
+            "year": 10,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 165547.84794980107,
+            "benefitPV": 380933.17382204096,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5024356.886047802
+          },
+          {
+            "year": 11,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 157664.61709504863,
+            "benefitPV": 362793.49887813424,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5182021.5031428505
+          },
+          {
+            "year": 12,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 150156.7781857606,
+            "benefitPV": 345517.61797917547,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5332178.281328611
+          },
+          {
+            "year": 13,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 143006.45541501007,
+            "benefitPV": 329064.39807540516,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5475184.7367436215
+          },
+          {
+            "year": 14,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 136196.6242047715,
+            "benefitPV": 313394.6648337192,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5611381.360948393
+          },
+          {
+            "year": 15,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 2050021.7940789228,
+            "replacementPV": 986095.5344110875,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 1115806.6050822984,
+            "benefitPV": 298471.10936544684,
+            "netCashFlow": -1699181.7940789228,
+            "cumulativeCostPV": 6727187.966030692
+          },
+          {
+            "year": 16,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 123534.35302020091,
+            "benefitPV": 284258.1993956637,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 6850722.319050892
+          },
+          {
+            "year": 17,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 117651.7647811437,
+            "benefitPV": 270722.0946625368,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 6968374.083832036
+          },
+          {
+            "year": 18,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 112049.29979156544,
+            "benefitPV": 257830.56634527314,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 7080423.383623601
+          },
+          {
+            "year": 19,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 106713.61884910993,
+            "benefitPV": 245552.92032883153,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 7187137.002472711
+          },
+          {
+            "year": 20,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 20000,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 109169.80760899327,
+            "benefitPV": 233859.9241226967,
+            "netCashFlow": 330839.99999999994,
+            "cumulativeCostPV": 7296306.8100817045
+          }
+        ],
+        "breakdown": {
+          "initial": 2942113.8450438255,
+          "energy": 3111315.4341185307,
+          "demand": 0,
+          "maintenance": 249244.20685079964,
+          "replacements": 986095.5344110875,
+          "terminal": 7537.789657460008
+        },
+        "annualDemand": 0,
+        "annuityFactor": 12.462210342539986,
+        "annualizedCost": 585474.535378016,
+        "annualCostPerReservedKw": 585.474535378016,
+        "requiredAnnualUnmodelledBenefit": 0,
+        "demandRateBreakEven": 2.9149021822556307,
+        "tcoPV": 7296306.810081704,
+        "benefitPV": 7732801.517546057,
+        "npv": 436494.7074643532,
+        "lcos": 0.8020199114767348,
+        "discountedDelivery": 9097413.550054183,
+        "feasible": true
+      },
+      {
+        "id": "lfp",
+        "name": "磷酸铁锂",
+        "battery": {
+          "id": "lfp",
+          "name": "磷酸铁锂",
+          "pricePerKWh": 700,
+          "replacementPricePerKWh": 500,
+          "roundTripEfficiency": 0.9,
+          "calendarLifeYears": 15,
+          "cycleLife": 15000,
+          "coldCapacityFactor": 0.9,
+          "dischargeC": 0.5,
+          "chargeC": 0.5,
+          "annualOM": 20000,
+          "auxKWhPerDay": 32
+        },
+        "day": {
+          "nominalKWh": 3660.0435881578455,
+          "energySizingKWh": 3660.0435881578455,
+          "powerSizingKWh": 2928.034870526277,
+          "sizingConstraint": "energy",
+          "availableDC": 2635.231383473649,
+          "reserveAC": 250,
+          "reserveDC": 263.523138347365,
+          "eta": 0.9486832980505138,
+          "hours": [
+            {
+              "hour": 0,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 1000,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 2001.3333333333333,
+              "storedBeforeDC": 263.523138347365,
+              "storedAfterDC": 1212.2064363978786,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.56,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 1,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 1000,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 2001.3333333333333,
+              "storedBeforeDC": 1212.2064363978786,
+              "storedAfterDC": 2160.889734448392,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9199999999999999,
+              "energyBalanceError": -2.2737367544323206e-13
+            },
+            {
+              "hour": 2,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 222.22222222222172,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1223.555555555555,
+              "storedBeforeDC": 2160.889734448392,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 3,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 4,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 5,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 6,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 7,
+              "price": 0.3,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 8,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 9,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 10,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 11,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 12,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 13,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 14,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 15,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 2371.7082451262836,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.9999999999999997,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 16,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 1000,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1.3333333333333712,
+              "storedBeforeDC": 2371.7082451262836,
+              "storedAfterDC": 1317.6156917368237,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.5999999999999996,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 17,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 999.9999999999995,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1.333333333333826,
+              "storedBeforeDC": 1317.6156917368237,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 18,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 19,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 20,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 21,
+              "price": 0.85,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 22,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            },
+            {
+              "hour": 23,
+              "price": 0.55,
+              "loadKw": 1000,
+              "chargeGridKWh": 0,
+              "deliveredACKWh": 0,
+              "auxGridKWh": 1.3333333333333333,
+              "gridImportKWh": 1001.3333333333334,
+              "storedBeforeDC": 263.52313834736447,
+              "storedAfterDC": 263.52313834736447,
+              "reserveDC": 263.523138347365,
+              "socFraction": 0.1999999999999998,
+              "energyBalanceError": 0
+            }
+          ],
+          "deliveredAC": 1999.9999999999995,
+          "chargedGrid": 2222.2222222222217,
+          "chargingGridCap": 2200,
+          "baselinePeakKw": 1000,
+          "gridPeakKw": 2001.3333333333333,
+          "incrementalPeakKw": 1001.3333333333333,
+          "chargeCost": 666.6666666666665,
+          "avoidedCost": 1699.9999999999995,
+          "auxCost": 17.333333333333332,
+          "feasible": true,
+          "warnings": []
+        },
+        "annualTestCycles": 233.60000000000002,
+        "cycleYears": 64.21232876712328,
+        "replacementBinding": "calendar",
+        "replacementInterval": 15,
+        "events": [
+          {
+            "type": "battery",
+            "timeYears": 15,
+            "cost": 1850021.7940789228
+          },
+          {
+            "type": "pcs",
+            "timeYears": 15,
+            "cost": 200000
+          }
+        ],
+        "yearly": [
+          {
+            "year": 1,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 256819.04761904755,
+            "benefitPV": 590952.3809523808,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3198932.892662873
+          },
+          {
+            "year": 2,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 244589.56916099766,
+            "benefitPV": 562811.7913832199,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3443522.461823871
+          },
+          {
+            "year": 3,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 232942.44681999777,
+            "benefitPV": 536011.2298887807,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3676464.9086438688
+          },
+          {
+            "year": 4,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 221849.9493523788,
+            "benefitPV": 510486.88560836256,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 3898314.8579962477
+          },
+          {
+            "year": 5,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 211285.66604988454,
+            "benefitPV": 486177.9862936786,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4109600.5240461323
+          },
+          {
+            "year": 6,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 201224.4438570329,
+            "benefitPV": 463026.65361302724,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4310824.967903165
+          },
+          {
+            "year": 7,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 191642.32748288848,
+            "benefitPV": 440977.7653457402,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4502467.295386054
+          },
+          {
+            "year": 8,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 182516.5023646557,
+            "benefitPV": 419978.8241388002,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4684983.79775071
+          },
+          {
+            "year": 9,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 173825.24034729114,
+            "benefitPV": 399979.832513143,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 4858809.038098001
+          },
+          {
+            "year": 10,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 165547.84794980107,
+            "benefitPV": 380933.17382204096,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5024356.886047802
+          },
+          {
+            "year": 11,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 157664.61709504863,
+            "benefitPV": 362793.49887813424,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5182021.5031428505
+          },
+          {
+            "year": 12,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 150156.7781857606,
+            "benefitPV": 345517.61797917547,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5332178.281328611
+          },
+          {
+            "year": 13,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 143006.45541501007,
+            "benefitPV": 329064.39807540516,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5475184.7367436215
+          },
+          {
+            "year": 14,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 136196.6242047715,
+            "benefitPV": 313394.6648337192,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 5611381.360948393
+          },
+          {
+            "year": 15,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 2050021.7940789228,
+            "replacementPV": 986095.5344110875,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 1115806.6050822984,
+            "benefitPV": 298471.10936544684,
+            "netCashFlow": -1699181.7940789228,
+            "cumulativeCostPV": 6727187.966030692
+          },
+          {
+            "year": 16,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 123534.35302020091,
+            "benefitPV": 284258.1993956637,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 6850722.319050892
+          },
+          {
+            "year": 17,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 117651.7647811437,
+            "benefitPV": 270722.0946625368,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 6968374.083832036
+          },
+          {
+            "year": 18,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 112049.29979156544,
+            "benefitPV": 257830.56634527314,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 7080423.383623601
+          },
+          {
+            "year": 19,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 0,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 106713.61884910993,
+            "benefitPV": 245552.92032883153,
+            "netCashFlow": 350839.99999999994,
+            "cumulativeCostPV": 7187137.002472711
+          },
+          {
+            "year": 20,
+            "chargingCost": 243333.33333333328,
+            "auxiliaryCost": 6326.666666666666,
+            "demandCost": 0,
+            "maintenanceCost": 20000,
+            "replacementCost": 0,
+            "replacementPV": 0,
+            "terminalCost": 20000,
+            "avoidedGridCost": 620499.9999999999,
+            "deliveredACKWh": 729999.9999999999,
+            "costPV": 109169.80760899327,
+            "benefitPV": 233859.9241226967,
+            "netCashFlow": 330839.99999999994,
+            "cumulativeCostPV": 7296306.8100817045
+          }
+        ],
+        "breakdown": {
+          "initial": 2942113.8450438255,
+          "energy": 3111315.4341185307,
+          "demand": 0,
+          "maintenance": 249244.20685079964,
+          "replacements": 986095.5344110875,
+          "terminal": 7537.789657460008
+        },
+        "annualDemand": 0,
+        "annuityFactor": 12.462210342539986,
+        "annualizedCost": 585474.535378016,
+        "annualCostPerReservedKw": 585.474535378016,
+        "requiredAnnualUnmodelledBenefit": 0,
+        "demandRateBreakEven": 2.9149021822556307,
+        "tcoPV": 7296306.810081704,
+        "benefitPV": 7732801.517546057,
+        "npv": 436494.7074643532,
+        "lcos": 0.8020199114767348,
+        "discountedDelivery": 9097413.550054183,
+        "feasible": true
+      }
+    ],
+    "comparable": true,
+    "difference": 0,
+    "preferred": "equal",
+    "parameterRegister": [
+      {
+        "parameter": "题设：循环次数",
+        "value": 15000,
+        "unit": "次",
+        "classification": "题设",
+        "source": "official-topic",
+        "scope": "测试温度、倍率、DoD、容量终点及两类系统适用范围未明确"
+      },
+      {
+        "parameter": "题设：设计温度",
+        "value": -30,
+        "unit": "℃",
+        "classification": "题设",
+        "source": "official-topic",
+        "scope": "正常充放电不等于无容量、效率或功率损失"
+      },
+      {
+        "parameter": "ratedPowerKw",
+        "value": 1000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "targetDeliveryKWh",
+        "value": 2000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "backupMinutes",
+        "value": 15,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "projectYears",
+        "value": 20,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "discountRate",
+        "value": 0.05,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "operatingDays",
+        "value": 365,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "depthOfDischarge",
+        "value": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "endOfLifeFraction",
+        "value": 0.8,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "lifeTestDoD",
+        "value": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "chargeUntilHour",
+        "value": 8,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "gridImportLimitKw",
+        "value": 2200,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "monthlyDemandRate",
+        "value": 0,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "增量实际峰值需量计费；假设代表日峰值每月出现，非容量计费合同。旧场景缺省为0"
+      },
+      {
+        "parameter": "dispatchPolicy",
+        "value": "energy-first",
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "energy-first为低价优先；min-peak先求最小充电峰值再低价优先；不是任意电价下的经济最优证明"
+      },
+      {
+        "parameter": "pcsPricePerKw",
+        "value": 200,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "pcsLifeYears",
+        "value": 15,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "otherInitialCost",
+        "value": 180000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "replacementFixedCost",
+        "value": 20000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "decommissionCost",
+        "value": 20000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "residualValue",
+        "value": 0,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "场景/共同参数，不代表行业均值"
+      },
+      {
+        "parameter": "钠电.pricePerKWh",
+        "value": 700,
+        "inputValue": 700,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.replacementPricePerKWh",
+        "value": 500,
+        "inputValue": 500,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.roundTripEfficiency",
+        "value": 0.9,
+        "inputValue": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.calendarLifeYears",
+        "value": 15,
+        "inputValue": 15,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.cycleLife",
+        "value": 15000,
+        "inputValue": 15000,
+        "classification": "题设解释",
+        "scope": "本列为实际生效值；common模式双方统一15,000，sodium-only模式LFP采用独立输入"
+      },
+      {
+        "parameter": "钠电.coldCapacityFactor",
+        "value": 0.9,
+        "inputValue": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.dischargeC",
+        "value": 0.5,
+        "inputValue": 0.5,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.chargeC",
+        "value": 0.5,
+        "inputValue": 0.5,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.annualOM",
+        "value": 20000,
+        "inputValue": 20000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "钠电.auxKWhPerDay",
+        "value": 32,
+        "inputValue": 32,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.pricePerKWh",
+        "value": 700,
+        "inputValue": 700,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.replacementPricePerKWh",
+        "value": 500,
+        "inputValue": 500,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.roundTripEfficiency",
+        "value": 0.9,
+        "inputValue": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.calendarLifeYears",
+        "value": 15,
+        "inputValue": 15,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.cycleLife",
+        "value": 15000,
+        "inputValue": 6000,
+        "classification": "题设解释",
+        "scope": "本列为实际生效值；common模式双方统一15,000，sodium-only模式LFP采用独立输入"
+      },
+      {
+        "parameter": "磷酸铁锂.coldCapacityFactor",
+        "value": 0.9,
+        "inputValue": 0.9,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.dischargeC",
+        "value": 0.5,
+        "inputValue": 0.5,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.chargeC",
+        "value": 0.5,
+        "inputValue": 0.5,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.annualOM",
+        "value": 20000,
+        "inputValue": 20000,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "磷酸铁锂.auxKWhPerDay",
+        "value": 32,
+        "inputValue": 32,
+        "classification": "演示假设或用户输入，未核验",
+        "scope": "电池侧费用与产品性能假设；没有厂商确认"
+      },
+      {
+        "parameter": "逐时电价与负载",
+        "value": "synthetic",
+        "classification": "用户输入，未核验",
+        "scope": "24小时演示日，重复用于年度测算；没有模拟全年天气。"
+      }
+    ],
+    "limitations": [
+      "除题设外均为演示假设或用户输入，未进行产品、报价和现场验证。",
+      "重复一个24小时代表日；−30℃是设计条件，不能解释为全年环境温度。",
+      "充电在指定前段窗口内按低价优先，放电在后段按高价优先；未证明全局最优。",
+      "电价负载、效率、低温系数和辅助用电在项目期保持不变；未纳入税费、融资与供应链。",
+      "年度收支按年末折现；更换按精确发生时点折现；金额采用不变价。",
+      "备用电仅按能量与功率约束模拟，未验证真实UPS切换、电气冗余或安全标准。",
+      "需量费用按代表日的购电峰值在每月出现计算。实际按月峰值、容量计费或合同门槛须重新核验；低频调度不能据此估算月份。",
+      "最小峰值策略先满足日交付，再压低充电窗口峰值；只在充电电价平坦等限定条件下同时达到较低能量费与需量费。",
+      "所需额外年收益是回本条件；没有假定停电概率、可用率或避免损失已被实现。"
+    ],
+    "boundary": {
+      "status": "found",
+      "value": 700,
+      "description": "仅改变钠电初始电池单价；替换价格、配置与其他参数保持不变。"
+    }
+  },
+  "sources": [
+    {
+      "id": "official-topic",
+      "title": "04题官方说明",
+      "url": "https://1836.online/projects/cmujvb96f000z3jo188jx0xjp",
+      "supports": "15,000次、−30℃题设与五项经济比较；适用对象待澄清"
+    },
+    {
+      "id": "official-rules",
+      "title": "官网赛程与评审机制",
+      "url": "https://1836.online/points-and-revenue",
+      "supports": "平台留痕、单页PPT、分组与归集节点"
+    },
+    {
+      "id": "doe-method",
+      "title": "美国能源部储能成本与性能评价",
+      "url": "https://www.energy.gov/cmei/2022-grid-energy-storage-technology-cost-and-performance-assessment",
+      "supports": "充电、运维、更换、退役费用及循环与日历寿命的方法框架，不提供本工具的产品参数"
+    },
+    {
+      "id": "catl-sodium",
+      "title": "宁德时代2026年钠电场站公告",
+      "url": "https://www.catl.com/news/10052.html",
+      "supports": "厂商披露：15,000次对应25℃，容量保持率对应−20℃；不能替代−30℃测试或配对产品数据"
+    },
+    {
+      "id": "hongying",
+      "title": "宏英智能2026年7月24日投资者记录",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225441968.PDF",
+      "supports": "第3页披露钠电电芯当前成本与理论长期成本判断；不是成套AIDC采购报价"
+    },
+    {
+      "id": "nature-cost",
+      "title": "Nature Energy钠电成本竞争力研究",
+      "url": "https://www.nature.com/articles/s41560-024-01701-9",
+      "supports": "2025年电芯成本情景研究；能量密度、材料与供应链影响结果，不涵盖本工具系统服务成本"
+    },
+    {
+      "id": "iea-sodium",
+      "title": "IEA钠电发展与约束分析",
+      "url": "https://www.iea.org/commentaries/sodium-ion-battery-momentum-grows-but-challenges-remain",
+      "supports": "2026年产业背景与低温应用潜力，不提供配对AIDC参数"
+    },
+    {
+      "id": "delta-ups",
+      "title": "台达LBM磷酸铁锂UPS电池系统",
+      "url": "https://www.deltapowersolutions.com/en/mcis/lbm-series-ups-battery-system-introduction.php",
+      "supports": "10—30分钟短时备电的产品用途；不是−30℃倍率、寿命或报价依据"
+    }
+  ],
+  "sensitivity": [
+    [
+      {
+        "price": 400,
+        "efficiency": 0.8,
+        "comparable": true,
+        "difference": -576738.7757971874
+      },
+      {
+        "price": 550,
+        "efficiency": 0.8,
+        "comparable": true,
+        "difference": 5570.59334338177
+      },
+      {
+        "price": 700,
+        "efficiency": 0.8,
+        "comparable": true,
+        "difference": 587879.9624839528
+      },
+      {
+        "price": 850,
+        "efficiency": 0.8,
+        "comparable": true,
+        "difference": 1170189.3316245228
+      },
+      {
+        "price": 1000,
+        "efficiency": 0.8,
+        "comparable": true,
+        "difference": 1752498.7007650938
+      }
+    ],
+    [
+      {
+        "price": 400,
+        "efficiency": 0.85,
+        "comparable": true,
+        "difference": -851663.0306185232
+      },
+      {
+        "price": 550,
+        "efficiency": 0.85,
+        "comparable": true,
+        "difference": -286739.96338243876
+      },
+      {
+        "price": 700,
+        "efficiency": 0.85,
+        "comparable": true,
+        "difference": 278183.1038536439
+      },
+      {
+        "price": 850,
+        "efficiency": 0.85,
+        "comparable": true,
+        "difference": 843106.1710897284
+      },
+      {
+        "price": 1000,
+        "efficiency": 0.85,
+        "comparable": true,
+        "difference": 1408029.238325812
+      }
+    ],
+    [
+      {
+        "price": 400,
+        "efficiency": 0.9,
+        "comparable": true,
+        "difference": -1098013.0764473546
+      },
+      {
+        "price": 550,
+        "efficiency": 0.9,
+        "comparable": true,
+        "difference": -549006.5382236773
+      },
+      {
+        "price": 700,
+        "efficiency": 0.9,
+        "comparable": true,
+        "difference": 0
+      },
+      {
+        "price": 850,
+        "efficiency": 0.9,
+        "comparable": true,
+        "difference": 549006.5382236764
+      },
+      {
+        "price": 1000,
+        "efficiency": 0.9,
+        "comparable": true,
+        "difference": 1098013.0764473528
+      }
+    ],
+    [
+      {
+        "price": 400,
+        "efficiency": 0.95,
+        "comparable": true,
+        "difference": -1320146.8557273382
+      },
+      {
+        "price": 550,
+        "efficiency": 0.95,
+        "comparable": true,
+        "difference": -785783.1306829872
+      },
+      {
+        "price": 700,
+        "efficiency": 0.95,
+        "comparable": true,
+        "difference": -251419.4056386361
+      },
+      {
+        "price": 850,
+        "efficiency": 0.95,
+        "comparable": true,
+        "difference": 282944.319405715
+      },
+      {
+        "price": 1000,
+        "efficiency": 0.95,
+        "comparable": true,
+        "difference": 817308.044450066
+      }
+    ],
+    [
+      {
+        "price": 400,
+        "efficiency": 1,
+        "comparable": true,
+        "difference": -1521569.7186909951
+      },
+      {
+        "price": 550,
+        "efficiency": 1,
+        "comparable": true,
+        "difference": -1000736.3853576621
+      },
+      {
+        "price": 700,
+        "efficiency": 1,
+        "comparable": true,
+        "difference": -479903.05202432815
+      },
+      {
+        "price": 850,
+        "efficiency": 1,
+        "comparable": true,
+        "difference": 40930.28130900487
+      },
+      {
+        "price": 1000,
+        "efficiency": 1,
+        "comparable": true,
+        "difference": 561763.6146423379
+      }
+    ]
+  ]
+}

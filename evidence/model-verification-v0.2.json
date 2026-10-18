@@ -1,0 +1,16 @@
+{
+  "modelVersion": "0.2.0",
+  "primaryFactsAudited": true,
+  "uiChecks": 18,
+  "verifiedOn": "2026-10-14",
+  "pairedProductInputsVerified": false,
+  "platformPublished": false,
+  "researchVersion": "1",
+  "fieldValidation": false,
+  "modelChecks": 47,
+  "researchAssertions": 6,
+  "claimBoundary": "软件一致性和条件性模拟，不是产品或现场验证",
+  "nativePowerPointOpened": false,
+  "conditionalGrid": 432,
+  "researchCases": 11
+}

@@ -1,0 +1,8 @@
+{
+  "model_version": "0.1.0",
+  "tests": 35,
+  "passed": 35,
+  "failed": 0,
+  "source_hash": "7E8CD16FBD5422D15E1CFE4BB92E0C22971DDA5041B53B060B461A4B0A9C6866",
+  "scope": "Software and simulated scenarios only; no battery or AIDC field validation"
+}

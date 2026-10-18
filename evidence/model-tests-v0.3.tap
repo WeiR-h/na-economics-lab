@@ -1,0 +1,442 @@
+TAP version 13
+# Subtest: 初始工作台不虚构参与者、积分、收入或正式结算
+ok 1 - 初始工作台不虚构参与者、积分、收入或正式结算
+  ---
+  duration_ms: 3.2033
+  type: 'test'
+  ...
+# Subtest: 认领和提交保留输入对象且不允许抢占任务
+ok 2 - 认领和提交保留输入对象且不允许抢占任务
+  ---
+  duration_ms: 1.7958
+  type: 'test'
+  ...
+# Subtest: 未认领或身份不符不能提交
+ok 3 - 未认领或身份不符不能提交
+  ---
+  duration_ms: 0.8044
+  type: 'test'
+  ...
+# Subtest: 拒绝脚本来源和未经确认分享的证据
+ok 4 - 拒绝脚本来源和未经确认分享的证据
+  ---
+  duration_ms: 2.3032
+  type: 'test'
+  ...
+# Subtest: 空证据或缺少结论影响不能提交
+ok 5 - 空证据或缺少结论影响不能提交
+  ---
+  duration_ms: 0.9272
+  type: 'test'
+  ...
+# Subtest: 复核阻止大小写、空格和全角字符伪装自我复核
+ok 6 - 复核阻止大小写、空格和全角字符伪装自我复核
+  ---
+  duration_ms: 1.5125
+  type: 'test'
+  ...
+# Subtest: 没有全部验收项不能通过复核
+ok 7 - 没有全部验收项不能通过复核
+  ---
+  duration_ms: 0.5429
+  type: 'test'
+  ...
+# Subtest: 补充、再次提交、独立通过保留完整修订历史
+ok 8 - 补充、再次提交、独立通过保留完整修订历史
+  ---
+  duration_ms: 0.7656
+  type: 'test'
+  ...
+# Subtest: 本地通过不自动产生平台积分
+ok 9 - 本地通过不自动产生平台积分
+  ---
+  duration_ms: 0.8202
+  type: 'test'
+  ...
+# Subtest: 未复核贡献和外站网址不能登记平台积分
+ok 10 - 未复核贡献和外站网址不能登记平台积分
+  ---
+  duration_ms: 1.4002
+  type: 'test'
+  ...
+# Subtest: 积分登记精确保留小数，重复贡献不重复入池
+ok 11 - 积分登记精确保留小数，重复贡献不重复入池
+  ---
+  duration_ms: 0.9541
+  type: 'test'
+  ...
+# Subtest: 复核更正保留历史积分并退出本地预演
+ok 12 - 复核更正保留历史积分并退出本地预演
+  ---
+  duration_ms: 1.2627
+  type: 'test'
+  ...
+# Subtest: 待发生收入不能计入已发生结余
+ok 13 - 待发生收入不能计入已发生结余
+  ---
+  duration_ms: 0.58
+  type: 'test'
+  ...
+# Subtest: 确认经营发生需要凭据，并保留原约定
+ok 14 - 确认经营发生需要凭据，并保留原约定
+  ---
+  duration_ms: 1.547
+  type: 'test'
+  ...
+# Subtest: 负经营结余保留负数，可用正结余为零
+ok 15 - 负经营结余保留负数，可用正结余为零
+  ---
+  duration_ms: 0.445
+  type: 'test'
+  ...
+# Subtest: 货币解析拒绝舍入歧义、负值与超限，0.29精确成29分
+ok 16 - 货币解析拒绝舍入歧义、负值与超限，0.29精确成29分
+  ---
+  duration_ms: 0.244
+  type: 'test'
+  ...
+# Subtest: 三人均分1分与100元，分配总额均守恒
+ok 17 - 三人均分1分与100元，分配总额均守恒
+  ---
+  duration_ms: 2.7762
+  type: 'test'
+  ...
+# Subtest: 积分加权和同贡献者汇总符合占比
+ok 18 - 积分加权和同贡献者汇总符合占比
+  ---
+  duration_ms: 2.4805
+  type: 'test'
+  ...
+# Subtest: 没有积分时不产生虚构分配
+ok 19 - 没有积分时不产生虚构分配
+  ---
+  duration_ms: 0.1715
+  type: 'test'
+  ...
+# Subtest: 导出与导入保持记录，跨项目和正式认证标记被拒绝
+ok 20 - 导出与导入保持记录，跨项目和正式认证标记被拒绝
+  ---
+  duration_ms: 2.424
+  type: 'test'
+  ...
+# Subtest: 修改验收要求、伪造通过或缺少事件留痕被拒绝
+ok 21 - 修改验收要求、伪造通过或缺少事件留痕被拒绝
+  ---
+  duration_ms: 0.8529
+  type: 'test'
+  ...
+# Subtest: 导入金额字段必须为安全整数，重复积分记录被拒绝
+ok 22 - 导入金额字段必须为安全整数，重复积分记录被拒绝
+  ---
+  duration_ms: 1.0377
+  type: 'test'
+  ...
+# Subtest: 过大和不完整导入被拒绝
+ok 23 - 过大和不完整导入被拒绝
+  ---
+  duration_ms: 0.2357
+  type: 'test'
+  ...
+# Subtest: CSV转义公式、引号与换行，不把证据当作表格命令
+ok 24 - CSV转义公式、引号与换行，不把证据当作表格命令
+  ---
+  duration_ms: 1.0073
+  type: 'test'
+  ...
+# Subtest: 共建与经营变化不改变储能现金流
+ok 25 - 共建与经营变化不改变储能现金流
+  ---
+  duration_ms: 7.349
+  type: 'test'
+  ...
+# Subtest: 手算：100kWh、每年1次、两年零折现的完整现金流
+ok 26 - 手算：100kWh、每年1次、两年零折现的完整现金流
+  ---
+  duration_ms: 4.6658
+  type: 'test'
+  ...
+# Subtest: 相同参数产生相同交付、费用和净现值
+ok 27 - 相同参数产生相同交付、费用和净现值
+  ---
+  duration_ms: 3.3939
+  type: 'test'
+  ...
+# Subtest: 每小时DC能量守恒
+ok 28 - 每小时DC能量守恒
+  ---
+  duration_ms: 0.769
+  type: 'test'
+  ...
+# Subtest: 应急备用电量未被日常调度使用
+ok 29 - 应急备用电量未被日常调度使用
+  ---
+  duration_ms: 0.6308
+  type: 'test'
+  ...
+# Subtest: SOC在允许范围内且日末回到备用水平
+ok 30 - SOC在允许范围内且日末回到备用水平
+  ---
+  duration_ms: 0.5231
+  type: 'test'
+  ...
+# Subtest: AC往返效率不被重复扣除
+ok 31 - AC往返效率不被重复扣除
+  ---
+  duration_ms: 0.4724
+  type: 'test'
+  ...
+# Subtest: 逐时购电不超过上限，充放电遵守功率与负载限制
+ok 32 - 逐时购电不超过上限，充放电遵守功率与负载限制
+  ---
+  duration_ms: 0.725
+  type: 'test'
+  ...
+# Subtest: 充放电不会同一小时发生
+ok 33 - 充放电不会同一小时发生
+  ---
+  duration_ms: 0.5623
+  type: 'test'
+  ...
+# Subtest: 充电在指定窗口内优先低价
+ok 34 - 充电在指定窗口内优先低价
+  ---
+  duration_ms: 0.5745
+  type: 'test'
+  ...
+# Subtest: 窗口不足时报告任务未满足并拒绝给采购边界
+ok 35 - 窗口不足时报告任务未满足并拒绝给采购边界
+  ---
+  duration_ms: 0.6941
+  type: 'test'
+  ...
+# Subtest: 购电上限不足时不会产生免费的储能电量
+ok 36 - 购电上限不足时不会产生免费的储能电量
+  ---
+  duration_ms: 0.9625
+  type: 'test'
+  ...
+# Subtest: 没有白天负载时不向电网出售虚构电量
+ok 37 - 没有白天负载时不向电网出售虚构电量
+  ---
+  duration_ms: 0.7534
+  type: 'test'
+  ...
+# Subtest: 零调度天数时LCOS为空，循环寿命不制造无限利润
+ok 38 - 零调度天数时LCOS为空，循环寿命不制造无限利润
+  ---
+  duration_ms: 0.6911
+  type: 'test'
+  ...
+# Subtest: 没有电价差时仍能计算出不合算的结论
+ok 39 - 没有电价差时仍能计算出不合算的结论
+  ---
+  duration_ms: 0.4334
+  type: 'test'
+  ...
+# Subtest: 备用初次补电费用计入初始成本
+ok 40 - 备用初次补电费用计入初始成本
+  ---
+  duration_ms: 0.5648
+  type: 'test'
+  ...
+# Subtest: 日历寿命约束15年更换，不能将15000次直接换算成年限
+ok 41 - 日历寿命约束15年更换，不能将15000次直接换算成年限
+  ---
+  duration_ms: 0.5434
+  type: 'test'
+  ...
+# Subtest: 项目期末不再次采购电池或PCS
+ok 42 - 项目期末不再次采购电池或PCS
+  ---
+  duration_ms: 0.5122
+  type: 'test'
+  ...
+# Subtest: 分数年更换按准确发生时点折现
+ok 43 - 分数年更换按准确发生时点折现
+  ---
+  duration_ms: 0.42
+  type: 'test'
+  ...
+# Subtest: 共同题设对两类系统都使用15000次
+ok 44 - 共同题设对两类系统都使用15000次
+  ---
+  duration_ms: 0.3016
+  type: 'test'
+  ...
+# Subtest: 单方题设解释启用独立LFP循环输入
+ok 45 - 单方题设解释启用独立LFP循环输入
+  ---
+  duration_ms: 0.3203
+  type: 'test'
+  ...
+# Subtest: 初始报价变化的费用差额与独立手算一致
+ok 46 - 初始报价变化的费用差额与独立手算一致
+  ---
+  duration_ms: 0.4217
+  type: 'test'
+  ...
+# Subtest: 采购边界两侧的结论会反转
+ok 47 - 采购边界两侧的结论会反转
+  ---
+  duration_ms: 1.5282
+  type: 'test'
+  ...
+# Subtest: 其他费用过高时不给负数采购报价
+ok 48 - 其他费用过高时不给负数采购报价
+  ---
+  duration_ms: 0.3307
+  type: 'test'
+  ...
+# Subtest: 更高效率可减少该演示场景的生命周期费用
+ok 49 - 更高效率可减少该演示场景的生命周期费用
+  ---
+  duration_ms: 0.4396
+  type: 'test'
+  ...
+# Subtest: 费用拆分、年度费用与总费用可以交叉核对
+ok 50 - 费用拆分、年度费用与总费用可以交叉核对
+  ---
+  duration_ms: 0.2742
+  type: 'test'
+  ...
+# Subtest: 残值仅在期末计入
+ok 51 - 残值仅在期末计入
+  ---
+  duration_ms: 4.6783
+  type: 'test'
+  ...
+# Subtest: 敏感性分析中心格与原模型一致
+ok 52 - 敏感性分析中心格与原模型一致
+  ---
+  duration_ms: 10.6645
+  type: 'test'
+  ...
+# Subtest: 输入对象不会被计算修改
+ok 53 - 输入对象不会被计算修改
+  ---
+  duration_ms: 4.7433
+  type: 'test'
+  ...
+# Subtest: NaN、无穷、效率超限、缺失参数与版本异常被拒绝
+ok 54 - NaN、无穷、效率超限、缺失参数与版本异常被拒绝
+  ---
+  duration_ms: 1.4117
+  type: 'test'
+  ...
+# Subtest: CSV导入保留24小时值，拒绝乱序、缺行和非法数据
+ok 55 - CSV导入保留24小时值，拒绝乱序、缺行和非法数据
+  ---
+  duration_ms: 2.0151
+  type: 'test'
+  ...
+# Subtest: CSV导出保留数值与空值并处理公式前缀
+ok 56 - CSV导出保留数值与空值并处理公式前缀
+  ---
+  duration_ms: 0.4132
+  type: 'test'
+  ...
+# Subtest: 输入极短更换周期时有限制，避免冻结界面
+ok 57 - 输入极短更换周期时有限制，避免冻结界面
+  ---
+  duration_ms: 0.9554
+  type: 'test'
+  ...
+# Subtest: 场景标题、数据说明与电池对象形状无效时被拒绝
+ok 58 - 场景标题、数据说明与电池对象形状无效时被拒绝
+  ---
+  duration_ms: 0.81
+  type: 'test'
+  ...
+# Subtest: 参数登记使用生效循环寿命并保留原始独立输入
+ok 59 - 参数登记使用生效循环寿命并保留原始独立输入
+  ---
+  duration_ms: 0.8889
+  type: 'test'
+  ...
+# Subtest: CSV负数金额保持数值，负号开头的文本公式被转义
+ok 60 - CSV负数金额保持数值，负号开头的文本公式被转义
+  ---
+  duration_ms: 0.4216
+  type: 'test'
+  ...
+# Subtest: 旧版场景缺省需量费和策略保持原结果
+ok 61 - 旧版场景缺省需量费和策略保持原结果
+  ---
+  duration_ms: 6.5539
+  type: 'test'
+  ...
+# Subtest: 最小峰值策略在平价充电窗口均分2MWh补电
+ok 62 - 最小峰值策略在平价充电窗口均分2MWh补电
+  ---
+  duration_ms: 3.0885
+  type: 'test'
+  ...
+# Subtest: 需量费采用增量峰值且按年末折现
+ok 63 - 需量费采用增量峰值且按年末折现
+  ---
+  duration_ms: 0.8077
+  type: 'test'
+  ...
+# Subtest: 平价窗口降低峰值不改变能量账和收益
+ok 64 - 平价窗口降低峰值不改变能量账和收益
+  ---
+  duration_ms: 0.6989
+  type: 'test'
+  ...
+# Subtest: 最小峰值仍拒绝充电窗口不足
+ok 65 - 最小峰值仍拒绝充电窗口不足
+  ---
+  duration_ms: 0.7278
+  type: 'test'
+  ...
+# Subtest: 需量单价回本分界两侧NPV反转
+ok 66 - 需量单价回本分界两侧NPV反转
+  ---
+  duration_ms: 2.7898
+  type: 'test'
+  ...
+# Subtest: 纯备电以功率配置容量，度电成本为空，所需年收益使NPV恰好回本
+ok 67 - 纯备电以功率配置容量，度电成本为空，所需年收益使NPV恰好回本
+  ---
+  duration_ms: 0.9604
+  type: 'test'
+  ...
+# Subtest: 4C假设下15分钟备电由能量配置约束
+ok 68 - 4C假设下15分钟备电由能量配置约束
+  ---
+  duration_ms: 1.0624
+  type: 'test'
+  ...
+# Subtest: 年化费用的独立两年零折现算例
+ok 69 - 年化费用的独立两年零折现算例
+  ---
+  duration_ms: 0.8188
+  type: 'test'
+  ...
+# Subtest: 新字段的非法需量费与策略被拒绝
+ok 70 - 新字段的非法需量费与策略被拒绝
+  ---
+  duration_ms: 1.5989
+  type: 'test'
+  ...
+# Subtest: 按不同负载求最小峰值不会突破小时上限
+ok 71 - 按不同负载求最小峰值不会突破小时上限
+  ---
+  duration_ms: 1.3074
+  type: 'test'
+  ...
+# Subtest: 有辅助耗电的纯备电仅产生辅助峰值费用，不虚构调度
+ok 72 - 有辅助耗电的纯备电仅产生辅助峰值费用，不虚构调度
+  ---
+  duration_ms: 0.5275
+  type: 'test'
+  ...
+1..72
+# tests 72
+# suites 0
+# pass 72
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 268.235

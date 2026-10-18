@@ -1,0 +1,1412 @@
+{
+  "modelVersion": "0.2.0",
+  "researchDate": "2026-10-14",
+  "dataStatus": "synthetic-not-field-measured",
+  "scenarioCount": 11,
+  "robustnessGridCount": 432,
+  "axes": {
+    "naPrice": [
+      560,
+      700,
+      840,
+      1050
+    ],
+    "naRTE": [
+      0.85,
+      0.9,
+      0.95
+    ],
+    "naCold": [
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "naCalendar": [
+      10,
+      15,
+      20
+    ],
+    "lfpCold": [
+      0.8,
+      0.9,
+      1
+    ]
+  },
+  "robustness": {
+    "comparable": 432,
+    "minDifference": -2333810.5360461017,
+    "maxDifference": 3751366.5361978784,
+    "minNaNPV": -4640245.4605705915,
+    "maxNaNPV": 670413.5976515338,
+    "minBoundary": 275.27605154387123,
+    "maxBoundary": 1287.9094827068711,
+    "interpretation": "这些网格点不是抽样分布，不输出占优概率或获奖概率。"
+  },
+  "baseScenario": {
+    "schemaVersion": 1,
+    "title": "寒冷地区AIDC园区",
+    "preset": "cold",
+    "interpretation": "common",
+    "provenance": {
+      "classification": "demonstration",
+      "researchDate": "2026-10-14",
+      "description": "除官方题设外均为演示假设；无真实AIDC运行数据或同口径产品报价。"
+    },
+    "common": {
+      "ratedPowerKw": 1000,
+      "targetDeliveryKWh": 2000,
+      "backupMinutes": 15,
+      "projectYears": 20,
+      "discountRate": 0.05,
+      "operatingDays": 365,
+      "designTemperatureC": -30,
+      "depthOfDischarge": 0.9,
+      "endOfLifeFraction": 0.8,
+      "lifeTestDoD": 0.9,
+      "chargeUntilHour": 8,
+      "gridImportLimitKw": 2200,
+      "monthlyDemandRate": 0,
+      "dispatchPolicy": "min-peak",
+      "pcsPricePerKw": 200,
+      "pcsLifeYears": 15,
+      "otherInitialCost": 180000,
+      "replacementFixedCost": 20000,
+      "decommissionCost": 20000,
+      "residualValue": 0
+    },
+    "batteries": [
+      {
+        "id": "sodium",
+        "name": "钠电",
+        "pricePerKWh": 700,
+        "replacementPricePerKWh": 500,
+        "roundTripEfficiency": 0.9,
+        "calendarLifeYears": 15,
+        "cycleLife": 15000,
+        "coldCapacityFactor": 0.9,
+        "dischargeC": 0.5,
+        "chargeC": 0.5,
+        "annualOM": 20000,
+        "auxKWhPerDay": 32
+      },
+      {
+        "id": "lfp",
+        "name": "磷酸铁锂",
+        "pricePerKWh": 700,
+        "replacementPricePerKWh": 500,
+        "roundTripEfficiency": 0.9,
+        "calendarLifeYears": 15,
+        "cycleLife": 6000,
+        "coldCapacityFactor": 0.9,
+        "dischargeC": 0.5,
+        "chargeC": 0.5,
+        "annualOM": 20000,
+        "auxKWhPerDay": 32
+      }
+    ],
+    "profile": {
+      "kind": "synthetic",
+      "description": "24小时演示日，重复用于年度测算；没有模拟全年天气。",
+      "hours": [
+        {
+          "hour": 0,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 1,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 2,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 3,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 4,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 5,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 6,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 7,
+          "price": 0.3,
+          "loadKw": 1000
+        },
+        {
+          "hour": 8,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 9,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 10,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 11,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 12,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 13,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 14,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 15,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 16,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 17,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 18,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 19,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 20,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 21,
+          "price": 0.85,
+          "loadKw": 1000
+        },
+        {
+          "hour": 22,
+          "price": 0.55,
+          "loadKw": 1000
+        },
+        {
+          "hour": 23,
+          "price": 0.55,
+          "loadKw": 1000
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case": "control-energy-first",
+      "label": "无需量费用，低价优先",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.4341185307,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081704,
+      "npv": 436494.7074643532,
+      "lcos": 0.8020199114767348,
+      "annualCostPerReservedKw": 585.474535378016,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 2.9149021822556307,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "control-energy-first",
+      "label": "无需量费用，低价优先",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.4341185307,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081704,
+      "npv": 436494.7074643532,
+      "lcos": 0.8020199114767348,
+      "annualCostPerReservedKw": 585.474535378016,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 2.9149021822556307,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "mixed-no-demand",
+      "label": "兼用：最小峰值，不计需量费用",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "mixed-no-demand",
+      "label": "兼用：最小峰值，不计需量费用",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "mixed-demand-40-energy",
+      "label": "兼用：需量40，低价优先",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.4341185307,
+      "demandPV": 5989836.779038416,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 13286143.58912012,
+      "npv": -5553342.071574063,
+      "lcos": 1.4604308703808446,
+      "annualCostPerReservedKw": 1066.114535378016,
+      "requiredAnnualUnmodelledBenefit": 445614.5353780161,
+      "demandRateBreakEven": 2.9149021822556307,
+      "sodiumInitialPriceBoundary": 699.9999999999998
+    },
+    {
+      "case": "mixed-demand-40-energy",
+      "label": "兼用：需量40，低价优先",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.4341185307,
+      "demandPV": 5989836.779038416,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 13286143.58912012,
+      "npv": -5553342.071574063,
+      "lcos": 1.4604308703808446,
+      "annualCostPerReservedKw": 1066.114535378016,
+      "requiredAnnualUnmodelledBenefit": 445614.5353780161,
+      "demandRateBreakEven": 2.9149021822556307,
+      "sodiumInitialPriceBoundary": 699.9999999999998
+    },
+    {
+      "case": "mixed-demand-40-peak",
+      "label": "兼用：需量40，最小峰值",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 1669603.8602912228,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 8965910.670372926,
+      "npv": -1233109.152826869,
+      "lcos": 0.9855450256319859,
+      "annualCostPerReservedKw": 719.4478687113492,
+      "requiredAnnualUnmodelledBenefit": 98947.86871134954,
+      "demandRateBreakEven": 10.457443657041317,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "mixed-demand-40-peak",
+      "label": "兼用：需量40，最小峰值",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 1669603.8602912228,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 8965910.670372926,
+      "npv": -1233109.152826869,
+      "lcos": 0.9855450256319859,
+      "annualCostPerReservedKw": 719.4478687113492,
+      "requiredAnnualUnmodelledBenefit": 98947.86871134954,
+      "demandRateBreakEven": 10.457443657041317,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "standby-half-c",
+      "label": "纯备电：0.5C",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 2928.034870526277,
+      "energySizingKWh": 406.6715097953162,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 0,
+      "gridPeakKw": 1001.3333333333334,
+      "annualTestCycles": 0,
+      "cycleYears": null,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2429707.7427017274,
+      "energyPV": 78844.25076713627,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 810041.1798448728,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 3575375.1698219967,
+      "npv": -3575375.1698219967,
+      "lcos": null,
+      "annualCostPerReservedKw": 286.89735380387435,
+      "requiredAnnualUnmodelledBenefit": 286897.35380387434,
+      "demandRateBreakEven": -17931.084612741637,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "standby-half-c",
+      "label": "纯备电：0.5C",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 2928.034870526277,
+      "energySizingKWh": 406.6715097953162,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 0,
+      "gridPeakKw": 1001.3333333333334,
+      "annualTestCycles": 0,
+      "cycleYears": null,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2429707.7427017274,
+      "energyPV": 78844.25076713627,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 810041.1798448728,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 3575375.1698219967,
+      "npv": -3575375.1698219967,
+      "lcos": null,
+      "annualCostPerReservedKw": 286.89735380387435,
+      "requiredAnnualUnmodelledBenefit": 286897.35380387434,
+      "demandRateBreakEven": -17931.084612741637,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "standby-four-c",
+      "label": "纯备电：4C假设",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 406.6715097953162,
+      "energySizingKWh": 406.6715097953162,
+      "powerSizingKWh": 366.0043588157846,
+      "deliveredAC": 0,
+      "gridPeakKw": 1001.3333333333334,
+      "annualTestCycles": 0,
+      "cycleYears": null,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 664753.3901900548,
+      "energyPV": 78844.25076713627,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 203631.73633902165,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 1204011.3738044724,
+      "npv": -1204011.3738044724,
+      "lcos": null,
+      "annualCostPerReservedKw": 96.61298764108942,
+      "requiredAnnualUnmodelledBenefit": 96612.98764108942,
+      "demandRateBreakEven": -6038.311727567917,
+      "sodiumInitialPriceBoundary": 700.0000000000002
+    },
+    {
+      "case": "standby-four-c",
+      "label": "纯备电：4C假设",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 406.6715097953162,
+      "energySizingKWh": 406.6715097953162,
+      "powerSizingKWh": 366.0043588157846,
+      "deliveredAC": 0,
+      "gridPeakKw": 1001.3333333333334,
+      "annualTestCycles": 0,
+      "cycleYears": null,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 664753.3901900548,
+      "energyPV": 78844.25076713627,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 203631.73633902165,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 1204011.3738044724,
+      "npv": -1204011.3738044724,
+      "lcos": null,
+      "annualCostPerReservedKw": 96.61298764108942,
+      "requiredAnnualUnmodelledBenefit": 96612.98764108942,
+      "demandRateBreakEven": -6038.311727567917,
+      "sodiumInitialPriceBoundary": 700.0000000000002
+    },
+    {
+      "case": "tight-window",
+      "label": "1小时充电窗口反例",
+      "technology": "钠电",
+      "feasible": false,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 900,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 105.12000000000003,
+      "cycleYears": 142.6940639269406,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 1443456.2832752648,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 5628447.659238437,
+      "npv": -2148686.97634271,
+      "lcos": 1.3748590625408916,
+      "annualCostPerReservedKw": 451.64120204468276,
+      "requiredAnnualUnmodelledBenefit": 172416.2020446828,
+      "demandRateBreakEven": -14.34888499040303,
+      "sodiumInitialPriceBoundary": null
+    },
+    {
+      "case": "tight-window",
+      "label": "1小时充电窗口反例",
+      "technology": "磷酸铁锂",
+      "feasible": false,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 900,
+      "gridPeakKw": 2001.3333333333333,
+      "annualTestCycles": 105.12000000000003,
+      "cycleYears": 142.6940639269406,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 1443456.2832752648,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 5628447.659238437,
+      "npv": -2148686.97634271,
+      "lcos": 1.3748590625408916,
+      "annualCostPerReservedKw": 451.64120204468276,
+      "requiredAnnualUnmodelledBenefit": 172416.2020446828,
+      "demandRateBreakEven": -14.34888499040303,
+      "sodiumInitialPriceBoundary": null
+    },
+    {
+      "case": "lfp-cycle-6000",
+      "label": "单方解释：LFP6000次假设",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "lfp-cycle-6000",
+      "label": "单方解释：LFP6000次假设",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 25.684931506849313,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 700
+    },
+    {
+      "case": "lfp-cycle-3000",
+      "label": "单方解释：LFP3000次假设",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 726.9898143345063
+    },
+    {
+      "case": "lfp-cycle-3000",
+      "label": "单方解释：LFP3000次假设",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 12.842465753424657,
+      "replacementInterval": 12.842465753424657,
+      "replacementBinding": "cycle",
+      "batteryReplacementTimes": "12.842465753424657",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 1084879.431311668,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7395090.706982282,
+      "npv": 337710.8105637748,
+      "lcos": 0.8128783710110922,
+      "annualCostPerReservedKw": 593.4012108380969,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 8.090800904230514,
+      "sodiumInitialPriceBoundary": 726.9898143345063
+    },
+    {
+      "case": "sodium-premium-20",
+      "label": "钠电初始电池费用贵20%假设",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 3454519.947385924,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7808712.912423801,
+      "npv": -75911.3948777439,
+      "lcos": 0.8583442831811567,
+      "annualCostPerReservedKw": 626.591326722244,
+      "requiredAnnualUnmodelledBenefit": 6091.326722244364,
+      "demandRateBreakEven": -1.818668408313405,
+      "sodiumInitialPriceBoundary": 699.9999999999998
+    },
+    {
+      "case": "sodium-premium-20",
+      "label": "钠电初始电池费用贵20%假设",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 699.9999999999998
+    },
+    {
+      "case": "cold-difference",
+      "label": "Na0.9、LFP0.7低温系数假设",
+      "technology": "钠电",
+      "feasible": true,
+      "nominalKWh": 3660.0435881578455,
+      "energySizingKWh": 3660.0435881578455,
+      "powerSizingKWh": 2928.034870526277,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 233.60000000000002,
+      "cycleYears": 64.21232876712328,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 2942113.8450438255,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 986095.5344110875,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 7296306.810081702,
+      "npv": 436494.70746435504,
+      "lcos": 0.8020199114767346,
+      "annualCostPerReservedKw": 585.4745353780158,
+      "requiredAnnualUnmodelledBenefit": 0,
+      "demandRateBreakEven": 10.457443657041345,
+      "sodiumInitialPriceBoundary": 968.7167282987106
+    },
+    {
+      "case": "cold-difference",
+      "label": "Na0.9、LFP0.7低温系数假设",
+      "technology": "磷酸铁锂",
+      "feasible": true,
+      "nominalKWh": 4705.770327631517,
+      "energySizingKWh": 4705.770327631517,
+      "powerSizingKWh": 3764.6162621052144,
+      "deliveredAC": 1999.9999999999995,
+      "gridPeakKw": 1279.111111111111,
+      "annualTestCycles": 181.68888888888887,
+      "cycleYears": 82.55870841487281,
+      "replacementInterval": 15,
+      "replacementBinding": "calendar",
+      "batteryReplacementTimes": "15",
+      "initialPV": 3674122.5626753955,
+      "energyPV": 3111315.43411853,
+      "demandPV": 0,
+      "maintenancePV": 249244.20685079964,
+      "replacementsPV": 1237601.7552199662,
+      "terminalPV": 7537.789657460008,
+      "tcoPV": 8279821.748522151,
+      "npv": -547020.2309760945,
+      "lcos": 0.9101292035331117,
+      "annualCostPerReservedKw": 664.394318579171,
+      "requiredAnnualUnmodelledBenefit": 43894.31857917137,
+      "demandRateBreakEven": -13.105389703176165,
+      "sodiumInitialPriceBoundary": 968.7167282987106
+    }
+  ],
+  "demandSweep": [
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 0,
+      "npv": 436494.7074643532,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 7296306.810081704
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 5,
+      "npv": -312234.8899154486,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 8045036.407461505
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 10,
+      "npv": -1060964.4872952504,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 8793766.004841307
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 15,
+      "npv": -1809694.084675054,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 9542495.60222111
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 20,
+      "npv": -2558423.682054856,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 10291225.199600913
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 25,
+      "npv": -3307153.279434656,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 11039954.796980713
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 30,
+      "npv": -4055882.8768144595,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 11788684.394360516
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 35,
+      "npv": -4804612.474194263,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 12537413.99174032
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 40,
+      "npv": -5553342.071574063,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 13286143.58912012
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 45,
+      "npv": -6302071.668953867,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 14034873.186499923
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 50,
+      "npv": -7050801.266333667,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 14783602.783879723
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 55,
+      "npv": -7799530.86371347,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 15532332.381259527
+    },
+    {
+      "policy": "energy-first",
+      "monthlyDemandRate": 60,
+      "npv": -8548260.461093273,
+      "gridPeakKw": 2001.3333333333333,
+      "tcoPV": 16281061.978639329
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 0,
+      "npv": 436494.70746435504,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 7296306.810081702
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 5,
+      "npv": 227794.2249279525,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 7505007.292618104
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 10,
+      "npv": 19093.74239154905,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 7713707.775154508
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 15,
+      "npv": -189606.74014485348,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 7922408.25769091
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 20,
+      "npv": -398307.222681256,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 8131108.740227313
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 25,
+      "npv": -607007.7052176595,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 8339809.222763716
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 30,
+      "npv": -815708.187754062,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 8548509.705300119
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 35,
+      "npv": -1024408.6702904655,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 8757210.187836522
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 40,
+      "npv": -1233109.152826869,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 8965910.670372926
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 45,
+      "npv": -1441809.6353632705,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 9174611.152909327
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 50,
+      "npv": -1650510.117899674,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 9383311.63544573
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 55,
+      "npv": -1859210.6004360775,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 9592012.117982134
+    },
+    {
+      "policy": "min-peak",
+      "monthlyDemandRate": 60,
+      "npv": -2067911.082972479,
+      "gridPeakKw": 1279.111111111111,
+      "tcoPV": 9800712.600518536
+    }
+  ],
+  "standbySweep": [
+    {
+      "backupMinutes": 5,
+      "dischargeC": 0.25,
+      "nominalKWh": 5856.069741052554,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 507.86828884559776
+    },
+    {
+      "backupMinutes": 5,
+      "dischargeC": 0.5,
+      "nominalKWh": 2928.034870526277,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 286.89289588236375
+    },
+    {
+      "backupMinutes": 5,
+      "dischargeC": 1,
+      "nominalKWh": 1464.0174352631384,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 176.40519940074668
+    },
+    {
+      "backupMinutes": 5,
+      "dischargeC": 2,
+      "nominalKWh": 732.0087176315692,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 121.16135115993816
+    },
+    {
+      "backupMinutes": 5,
+      "dischargeC": 4,
+      "nominalKWh": 366.0043588157846,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 93.53942703953389
+    },
+    {
+      "backupMinutes": 15,
+      "dischargeC": 0.25,
+      "nominalKWh": 5856.069741052554,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 507.8727467671083
+    },
+    {
+      "backupMinutes": 15,
+      "dischargeC": 0.5,
+      "nominalKWh": 2928.034870526277,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 286.89735380387435
+    },
+    {
+      "backupMinutes": 15,
+      "dischargeC": 1,
+      "nominalKWh": 1464.0174352631384,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 176.40965732225726
+    },
+    {
+      "backupMinutes": 15,
+      "dischargeC": 2,
+      "nominalKWh": 732.0087176315692,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 121.16580908144876
+    },
+    {
+      "backupMinutes": 15,
+      "dischargeC": 4,
+      "nominalKWh": 406.6715097953162,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 96.61298764108942
+    },
+    {
+      "backupMinutes": 30,
+      "dischargeC": 0.25,
+      "nominalKWh": 5856.069741052554,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 507.8794336493742
+    },
+    {
+      "backupMinutes": 30,
+      "dischargeC": 0.5,
+      "nominalKWh": 2928.034870526277,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 286.90404068614026
+    },
+    {
+      "backupMinutes": 30,
+      "dischargeC": 1,
+      "nominalKWh": 1464.0174352631384,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 176.41634420452317
+    },
+    {
+      "backupMinutes": 30,
+      "dischargeC": 2,
+      "nominalKWh": 813.3430195906324,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 127.31070132380448
+    },
+    {
+      "backupMinutes": 30,
+      "dischargeC": 4,
+      "nominalKWh": 813.3430195906324,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 127.31070132380448
+    },
+    {
+      "backupMinutes": 60,
+      "dischargeC": 0.25,
+      "nominalKWh": 5856.069741052554,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 507.892807413906
+    },
+    {
+      "backupMinutes": 60,
+      "dischargeC": 0.5,
+      "nominalKWh": 2928.034870526277,
+      "sizingConstraint": "power",
+      "annualCostPerReservedKw": 286.917414450672
+    },
+    {
+      "backupMinutes": 60,
+      "dischargeC": 1,
+      "nominalKWh": 1626.6860391812647,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 188.70612868923462
+    },
+    {
+      "backupMinutes": 60,
+      "dischargeC": 2,
+      "nominalKWh": 1626.6860391812647,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 188.70612868923462
+    },
+    {
+      "backupMinutes": 60,
+      "dischargeC": 4,
+      "nominalKWh": 1626.6860391812647,
+      "sizingConstraint": "energy",
+      "annualCostPerReservedKw": 188.70612868923462
+    }
+  ],
+  "cycleSweep": [
+    {
+      "lfpCycleLife": 1500,
+      "annualTestCycles": 233.60000000000002,
+      "lfpCycleYears": 6.421232876712328,
+      "lfpReplacementYears": 6.421232876712328,
+      "binding": "cycle",
+      "sodiumInitialPriceBoundary": 1293.9746984754383,
+      "costDifference": -2173973.2866830174
+    },
+    {
+      "lfpCycleLife": 3000,
+      "annualTestCycles": 233.60000000000002,
+      "lfpCycleYears": 12.842465753424657,
+      "lfpReplacementYears": 12.842465753424657,
+      "binding": "cycle",
+      "sodiumInitialPriceBoundary": 726.9898143345063,
+      "costDifference": -98783.89690058026
+    },
+    {
+      "lfpCycleLife": 6000,
+      "annualTestCycles": 233.60000000000002,
+      "lfpCycleYears": 25.684931506849313,
+      "lfpReplacementYears": 15,
+      "binding": "calendar",
+      "sodiumInitialPriceBoundary": 700,
+      "costDifference": 0
+    },
+    {
+      "lfpCycleLife": 10000,
+      "annualTestCycles": 233.60000000000002,
+      "lfpCycleYears": 42.80821917808219,
+      "lfpReplacementYears": 15,
+      "binding": "calendar",
+      "sodiumInitialPriceBoundary": 700,
+      "costDifference": 0
+    },
+    {
+      "lfpCycleLife": 15000,
+      "annualTestCycles": 233.60000000000002,
+      "lfpCycleYears": 64.21232876712328,
+      "lfpReplacementYears": 15,
+      "binding": "calendar",
+      "sodiumInitialPriceBoundary": 700,
+      "costDifference": 0
+    }
+  ],
+  "boundarySweep": [
+    {
+      "naCold": 0.7,
+      "lfpCold": 0.7,
+      "priceBoundary": 700,
+      "nominalNa": 4705.770327631517,
+      "nominalLfp": 4705.770327631517
+    },
+    {
+      "naCold": 0.7,
+      "lfpCold": 0.8,
+      "priceBoundary": 582.4364313693145,
+      "nominalNa": 4705.770327631517,
+      "nominalLfp": 4117.5490366775775
+    },
+    {
+      "naCold": 0.7,
+      "lfpCold": 0.9,
+      "priceBoundary": 490.9981002121141,
+      "nominalNa": 4705.770327631517,
+      "nominalLfp": 3660.0435881578455
+    },
+    {
+      "naCold": 0.7,
+      "lfpCold": 1,
+      "priceBoundary": 417.8474352863543,
+      "nominalNa": 4705.770327631517,
+      "nominalLfp": 3294.0392293420614
+    },
+    {
+      "naCold": 0.8,
+      "lfpCold": 0.7,
+      "priceBoundary": 834.3583641493548,
+      "nominalNa": 4117.5490366775775,
+      "nominalLfp": 4705.770327631517
+    },
+    {
+      "naCold": 0.8,
+      "lfpCold": 0.8,
+      "priceBoundary": 699.9999999999999,
+      "nominalNa": 4117.5490366775775,
+      "nominalLfp": 4117.5490366775775
+    },
+    {
+      "naCold": 0.8,
+      "lfpCold": 0.9,
+      "priceBoundary": 595.4990501060565,
+      "nominalNa": 4117.5490366775775,
+      "nominalLfp": 3660.0435881578455
+    },
+    {
+      "naCold": 0.8,
+      "lfpCold": 1,
+      "priceBoundary": 511.89829019090257,
+      "nominalNa": 4117.5490366775775,
+      "nominalLfp": 3294.0392293420614
+    },
+    {
+      "naCold": 0.9,
+      "lfpCold": 0.7,
+      "priceBoundary": 968.7167282987106,
+      "nominalNa": 3660.0435881578455,
+      "nominalLfp": 4705.770327631517
+    },
+    {
+      "naCold": 0.9,
+      "lfpCold": 0.8,
+      "priceBoundary": 817.5635686306863,
+      "nominalNa": 3660.0435881578455,
+      "nominalLfp": 4117.5490366775775
+    },
+    {
+      "naCold": 0.9,
+      "lfpCold": 0.9,
+      "priceBoundary": 700,
+      "nominalNa": 3660.0435881578455,
+      "nominalLfp": 3660.0435881578455
+    },
+    {
+      "naCold": 0.9,
+      "lfpCold": 1,
+      "priceBoundary": 605.9491450954517,
+      "nominalNa": 3660.0435881578455,
+      "nominalLfp": 3294.0392293420614
+    },
+    {
+      "naCold": 1,
+      "lfpCold": 0.7,
+      "priceBoundary": 1103.0750924480656,
+      "nominalNa": 3294.0392293420614,
+      "nominalLfp": 4705.770327631517
+    },
+    {
+      "naCold": 1,
+      "lfpCold": 0.8,
+      "priceBoundary": 935.1271372613718,
+      "nominalNa": 3294.0392293420614,
+      "nominalLfp": 4117.5490366775775
+    },
+    {
+      "naCold": 1,
+      "lfpCold": 0.9,
+      "priceBoundary": 804.5009498939427,
+      "nominalNa": 3294.0392293420614,
+      "nominalLfp": 3660.0435881578455
+    },
+    {
+      "naCold": 1,
+      "lfpCold": 1,
+      "priceBoundary": 700.0000000000001,
+      "nominalNa": 3294.0392293420614,
+      "nominalLfp": 3294.0392293420614
+    }
+  ],
+  "sources": [
+    {
+      "id": "official-topic",
+      "title": "04题官方说明",
+      "url": "https://1836.online/projects/cmujvb96f000z3jo188jx0xjp",
+      "supports": "15,000次、−30℃题设与五项经济比较；适用对象待澄清"
+    },
+    {
+      "id": "official-rules",
+      "title": "官网赛程与评审机制",
+      "url": "https://1836.online/points-and-revenue",
+      "supports": "平台留痕、单页PPT、分组与归集节点"
+    },
+    {
+      "id": "doe-method",
+      "title": "美国能源部储能成本与性能评价",
+      "url": "https://www.energy.gov/cmei/2022-grid-energy-storage-technology-cost-and-performance-assessment",
+      "supports": "充电、运维、更换、退役费用及循环与日历寿命的方法框架，不提供本工具的产品参数"
+    },
+    {
+      "id": "catl-sodium",
+      "title": "宁德时代2026年钠电场站公告",
+      "url": "https://www.catl.com/news/10052.html",
+      "supports": "厂商披露：15,000次对应25℃，容量保持率对应−20℃；不能替代−30℃测试或配对产品数据"
+    },
+    {
+      "id": "hongying",
+      "title": "宏英智能2026年7月24日投资者记录",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225441968.PDF",
+      "supports": "第3页披露钠电电芯当前成本与理论长期成本判断；不是成套AIDC采购报价"
+    },
+    {
+      "id": "nature-cost",
+      "title": "Nature Energy钠电成本竞争力研究",
+      "url": "https://www.nature.com/articles/s41560-024-01701-9",
+      "supports": "2025年电芯成本情景研究；能量密度、材料与供应链影响结果，不涵盖本工具系统服务成本"
+    },
+    {
+      "id": "iea-sodium",
+      "title": "IEA钠电发展与约束分析",
+      "url": "https://www.iea.org/commentaries/sodium-ion-battery-momentum-grows-but-challenges-remain",
+      "supports": "2026年产业背景与低温应用潜力，不提供配对AIDC参数"
+    },
+    {
+      "id": "delta-ups",
+      "title": "台达LBM磷酸铁锂UPS电池系统",
+      "url": "https://www.deltapowersolutions.com/en/mcis/lbm-series-ups-battery-system-introduction.php",
+      "supports": "10—30分钟短时备电的产品用途；不是−30℃倍率、寿命或报价依据"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "url": "http://127.0.0.1:4176/",
+  "browser": "Playwright Chromium",
+  "fallback": "Browser skill not available; IAB getTab timed out twice. Authenticated 1836 page read through Windows accessibility.",
+  "viewports": [
+    {
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 320,
+      "height": 800
+    }
+  ],
+  "checks": [
+    {
+      "name": "页面地址与标题正确",
+      "passed": true
+    },
+    {
+      "name": "首屏有实际内容且没有框架报错",
+      "passed": true
+    },
+    {
+      "name": "默认共同条件下费用差额为零",
+      "passed": true
+    },
+    {
+      "name": "参数修改时旧结果明确标记",
+      "passed": true
+    },
+    {
+      "name": "未运行前结果不冒用新参数",
+      "passed": true
+    },
+    {
+      "name": "重新运行后费用比较变化",
+      "passed": true
+    },
+    {
+      "name": "场景下载包含本次修改值",
+      "passed": true
+    },
+    {
+      "name": "不可行场景停止给采购比较",
+      "passed": true
+    },
+    {
+      "name": "逐时页报告实际900kWh及不足",
+      "passed": true
+    },
+    {
+      "name": "逐时账本包含24行",
+      "passed": true
+    },
+    {
+      "name": "电池视图切换有效",
+      "passed": true
+    },
+    {
+      "name": "结果导出携带对应输入与不可行结论",
+      "passed": true
+    },
+    {
+      "name": "无效场景导入显示错误",
+      "passed": true
+    },
+    {
+      "name": "合法JSON导入后参数与结果同步",
+      "passed": true
+    },
+    {
+      "name": "参数登记将折现率按百分比显示",
+      "passed": true
+    },
+    {
+      "name": "24小时CSV导入后重新计算",
+      "passed": true
+    },
+    {
+      "name": "导入后能继续经济比较",
+      "passed": true
+    },
+    {
+      "name": "现金流下载包含两类系统40个年度记录",
+      "passed": true
+    },
+    {
+      "name": "刷新后保留有效输入",
+      "passed": true
+    },
+    {
+      "name": "备用场景不伪造放电度电成本",
+      "passed": true
+    },
+    {
+      "name": "无效输入在界面报告且保留旧结果",
+      "passed": true
+    },
+    {
+      "name": "恢复演示场景回到相同参数结果",
+      "passed": true
+    },
+    {
+      "name": "390px手机无页面横向溢出",
+      "passed": true
+    },
+    {
+      "name": "320px窄屏无页面横向溢出",
+      "passed": true
+    },
+    {
+      "name": "没有相关控制台错误或页面错误",
+      "passed": true
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createWorkspace,claimTask,submitEvidence,reviewEvidence,reopenEvidence,linkAnalysis,parseWorkspace,serializeWorkspace,assertWorkspace} from '../src/cobuild/workspace.mjs';
+import {inspectTimeSeries,sampleTimeSeries,replayDatasetDay} from '../src/research/datasets.mjs';
+import {caseScenario} from '../src/research/cases.mjs';
+import {assertAnalysis,inputChanges,communityAnalysisSummary} from '../src/research/analysis.mjs';
+const at='2026-10-16T12:00:00Z';
+function submitted(){let s=claimTask(createWorkspace(),'monthly-load','演练贡献者',at);return submitEvidence(s,'monthly-load',{contributor:'演练贡献者',summary:'合成样例验证，并非现场资料',source:'https://1836.online/projects/cmujvb96f000z3jo188jx0xjp',impact:'检查逐时负荷和电价变化',modelVersion:'0.2.0',shareAllowed:true},at);}
+function record(shareScope='summary'){const d=inspectTimeSeries(sampleTimeSeries(),{classification:'sample',source:'SAMPLE-SOURCE-NOT-FIELD-DATA',shareScope});return replayDatasetDay(d,'2026-10-11',caseScenario('mixed-no-demand'));}
+function linked(share='summary'){let s=submitted();return linkAnalysis(s,s.contributions[0].id,record(share),at);}
+function review(s){return reviewEvidence(s,s.contributions[0].id,{reviewer:'演练复核者',decision:'accept',checks:[true,true,true],note:'仅合成样例的软件复核',},at);}
+test('旧版空白和含历史记录的资料迁移，不丢失贡献和事件',()=>{for(const state of [createWorkspace(),submitted()]){const old=structuredClone(state);old.schemaVersion=1;delete old.analysisRecords;const migrated=parseWorkspace(JSON.stringify(old));assert.equal(migrated.schemaVersion,2);assert.deepEqual(migrated.analysisRecords,[]);assert.deepEqual(migrated.contributions,old.contributions);assert.deepEqual(migrated.events,old.events);}const oversized={...createWorkspace(),extra:'中'.repeat(350000)};assert.throws(()=>serializeWorkspace(oversized),/1MB/);assert.throws(()=>parseWorkspace(JSON.stringify(oversized)),/1MB/);});
+test('复算关联保存输入、结果、来源和事件，且不修改输入对象',()=>{const s=submitted(),r=record();const n=linkAnalysis(s,s.contributions[0].id,r,at);assert.equal(s.analysisRecords.length,0);r.after[0].chargingCostRMB=999;assert.notEqual(n.analysisRecords[0].analysis.after[0].chargingCostRMB,999);assert.equal(n.events.at(-1).kind,'analysis-link');assert.deepEqual(parseWorkspace(serializeWorkspace(n)),n);assert.ok(inputChanges(n.analysisRecords[0].analysis).length>0);});
+test('篡改结果或修改产品假设不能冒充仅数据回放',()=>{for(const mutate of [r=>r.after[0].chargingCostRMB++,r=>r.scenario.batteries[0].pricePerKWh++,r=>r.source.shareScope='summary']){const r=record('private');mutate(r);assert.throws(()=>assertAnalysis(r));}});
+test('重复关联和关联已复核贡献被拒绝，避免复核意见覆盖后加入的计算',()=>{let s=linked();assert.throws(()=>linkAnalysis(s,s.contributions[0].id,record(),at),/已关联/);s=review(s);assert.throws(()=>linkAnalysis(s,s.contributions[0].id,record(),at),/待复核/);});
+test('导入伪造关联事件顺序、缺事件或模型版本被拒绝',()=>{for(const mutate of [s=>s.events.at(-1).detail='fake',s=>s.analysisRecords[0].analysis.modelVersion='fake',s=>s.analysisRecords[0].contributionId='missing']){const s=linked();mutate(s);assert.throws(()=>parseWorkspace(JSON.stringify(s)));}});
+test('社区摘要对仅本地资料省略来源、日期、输入和结果',()=>{const text=communityAnalysisSummary(review(linked('private')));assert.ok(text.includes('已省略'));assert.equal(text.includes('SAMPLE-SOURCE'),false);assert.equal(text.includes('2026-10-11'),false);assert.equal(text.includes('充电费元'),false);});
+test('允许脱敏摘要时保留前后变化、样例标识及复核，且不导出原始逐时数据',()=>{const text=communityAnalysisSummary(review(linked()));assert.ok(text.includes('合成样例验证，非现场研究'));assert.ok(text.includes('演练复核者'));assert.ok(text.includes('充电费元'));assert.equal(text.includes('storedAfterDC'),false);assert.equal(text.includes('npv'),false);});
+test('更正保留复算快照，摘要不再显示复核通过',()=>{let s=review(linked());const saved=structuredClone(s.analysisRecords);s=reopenEvidence(s,s.contributions[0].id,{reviewer:'演练复核者',note:'需要补充曲线，原结论待检验'},at);assert.deepEqual(s.analysisRecords,saved);assert.ok(communityAnalysisSummary(s).includes('需补充'));assertWorkspace(s);});
+test('旧版资料不能夹带复算记录绕过迁移检查',()=>{const s=linked();s.schemaVersion=1;assert.throws(()=>parseWorkspace(JSON.stringify(s)),/旧版/);});
+test('用户声明资料与样例声明冲突不能伪装现场验证',()=>{const r=record();r.classification='user-supplied';assert.throws(()=>assertAnalysis(r),/性质/);});

@@ -1,0 +1,81 @@
+{
+  "modelVersion": "0.2.0",
+  "verifiedOn": "2026-10-14",
+  "browser": "installed-Chrome-isolated-headless-context",
+  "passed": 18,
+  "errors": [],
+  "checks": [
+    {
+      "name": "共同参数费用相等",
+      "passed": true
+    },
+    {
+      "name": "修改后提示待运行",
+      "passed": true
+    },
+    {
+      "name": "需量费使NPV负123.31万元",
+      "passed": true
+    },
+    {
+      "name": "最小峰值显示1279.1kW",
+      "passed": true
+    },
+    {
+      "name": "额外年收益需求显示9.89万元",
+      "passed": true
+    },
+    {
+      "name": "需量费用纳入拆分",
+      "passed": true
+    },
+    {
+      "name": "现金流导出包含需量项",
+      "passed": true
+    },
+    {
+      "name": "导出输入与结果策略一致",
+      "passed": true
+    },
+    {
+      "name": "来源页面包含厂商与论文",
+      "passed": true
+    },
+    {
+      "name": "4C备电容量406.7kWh",
+      "passed": true
+    },
+    {
+      "name": "纯备用LCOS为空",
+      "passed": true
+    },
+    {
+      "name": "纯备用年化费用96.6",
+      "passed": true
+    },
+    {
+      "name": "不可行采购分界被拦截",
+      "passed": true
+    },
+    {
+      "name": "不可行净现值不作为收益显示",
+      "passed": true
+    },
+    {
+      "name": "旧场景显示缺省需量0和低价策略",
+      "passed": true
+    },
+    {
+      "name": "390像素含高级参数无页面横向溢出",
+      "passed": true
+    },
+    {
+      "name": "320像素含高级参数无页面横向溢出",
+      "passed": true
+    },
+    {
+      "name": "没有页面或控制台错误",
+      "passed": true
+    }
+  ]
+}

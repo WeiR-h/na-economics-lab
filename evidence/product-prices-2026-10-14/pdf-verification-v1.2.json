@@ -1,0 +1,26 @@
+{
+  "file": "C:\\Users\\何浩然\\Desktop\\Competition\\na-economics-lab\\output\\pdf\\AIDC-Na-LFP-Research-v1.2.pdf",
+  "pages": 13,
+  "textCharacters": 14792,
+  "author": "WeiR-h",
+  "keyValuesPresent": true,
+  "visualReview": "passed",
+  "dataStatus": "public-product-and-award-evidence-with-conditional-economic-model",
+  "visuallyReviewedPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "sha256": "90b5cb15fcc0ea75084c240c5de66118027d5d2554b7740c688d63bb7e4fc70e",
+  "visualReviewBoundary": "All rendered pages inspected for readable tables, plots, Chinese text and page boundaries; not external peer review."
+}

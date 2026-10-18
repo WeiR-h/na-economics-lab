@@ -1,0 +1,87 @@
+{
+  "author": "WeiR-h",
+  "researchRevision": "1.1",
+  "date": "2026-10-14",
+  "task": {
+    "powerKW": 1000,
+    "minutes": 15,
+    "scope": "厂商15分钟功率表的整柜数量初筛，尚未保证交流侧、EOL、−30℃、冗余与UPS接口"
+  },
+  "screened": [
+    {
+      "id": "cospowers-lfp",
+      "sku": "CFS80085U",
+      "powerKWPerCabinetFor15Minutes": 232,
+      "cabinetsAtCatalogueConditions": 5,
+      "aggregateListedPowerKW": 1160,
+      "aggregateListedEnergyKWh": 290,
+      "cabinetBaseAreaM2": 6,
+      "validForMinus30C": false,
+      "acSideEOLTaskFeasibilityConfirmed": false
+    },
+    {
+      "id": "cospowers-na",
+      "sku": "CNS80050U",
+      "powerKWPerCabinetFor15Minutes": 121,
+      "cabinetsAtCatalogueConditions": 9,
+      "aggregateListedPowerKW": 1089,
+      "aggregateListedEnergyKWh": 333.45,
+      "cabinetBaseAreaM2": 10.8,
+      "validForMinus30C": false,
+      "acSideEOLTaskFeasibilityConfirmed": false
+    }
+  ],
+  "pureInitialCabinetPriceRatioBoundary": 0.5555555555555556,
+  "boundaryMeaning": "仅在原表功率可用、柜价供货边界一致及其他费用相同的条件下，9柜钠电总柜价低于5柜LFP需Na单柜价/LFP单柜价<5/9。不是本任务完整TCO或实际成交结论。",
+  "prices": [
+    {
+      "id": "renqiu-na-award",
+      "status": "final-award-not-invoice-or-current-offer",
+      "publishedOn": "2026-09-15",
+      "project": "任丘智弘100MW/400MWh独立储能试点",
+      "lot": "二标段：钠电池储能系统",
+      "supplier": "宁德时代新能源科技股份有限公司",
+      "powerMW": 10,
+      "energyMWh": 40,
+      "totalRMB": 41416220,
+      "vatStatus": "公告摘录未明确含税及税率，待合同核验",
+      "sourceIds": [
+        "renqiu-na-award",
+        "renqiu-na-tender",
+        "renqiu-na-amendment"
+      ],
+      "admittedAsBatteryOnlyModelInput": false,
+      "durationHours": 4,
+      "derivedRMBPerKWh": 1035.4055,
+      "derivedRMBPerWh": 1.0354055
+    },
+    {
+      "id": "renqiu-lfp-award",
+      "status": "final-award-not-invoice-or-current-offer",
+      "publishedOn": "2026-09-15",
+      "project": "任丘智弘100MW/400MWh独立储能试点",
+      "lot": "一标段：磷酸铁锂电池储能系统",
+      "supplier": "远景能源有限公司",
+      "powerMW": 90,
+      "energyMWh": 360,
+      "totalRMB": 186480000,
+      "subsystems": [
+        "30MW/120MWh大容量LFP",
+        "60MW/240MWh长寿命LFP"
+      ],
+      "vatStatus": "公告摘录未明确含税及税率，待合同核验",
+      "sourceIds": [
+        "renqiu-lfp-award",
+        "renqiu-lfp-tender",
+        "renqiu-lfp-amendment"
+      ],
+      "admittedAsBatteryOnlyModelInput": false,
+      "durationHours": 4,
+      "derivedRMBPerKWh": 518,
+      "derivedRMBPerWh": 0.518
+    }
+  ],
+  "awardNaToLFPRMBPerKWhRatio": 1.9988523166023167,
+  "batteryOnlyModelPricesUpdated": false,
+  "modelCalibrationComplete": false
+}

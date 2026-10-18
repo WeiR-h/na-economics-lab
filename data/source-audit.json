@@ -1,0 +1,38 @@
+{
+  "reviewDate": "2026-10-14",
+  "author": "WeiR-h",
+  "researchRevision": "1.1",
+  "parameterPolicy": "公开产品规格进入独立任务初筛，历史最终中标价进入采购背景；尚缺本项目同工况EOL测试、−30℃曲线和同供货边界有效报价，长期经济模型保留显式假设。",
+  "sources": [
+    {"id":"official-topic","type":"官方题目","date":"2026-10-14读取","url":"https://1836.online/projects/cmujvb96f000z3jo188jx0xjp","claim":"比较两类AIDC系统的建设、运维、替换、能效与长期收益，建立可复用经济模型","supportsInputs":["15000次循环","−30℃正常充放电"],"limits":"未指定测试DoD、倍率、EOL、温度口径及条件适用对象"},
+    {"id":"official-rules","type":"官方现行规则","date":"2026-10-14读取","url":"https://1836.online/points-and-revenue","claim":"留痕与原创性重要；10月15日零点分组、10月17日零点归集、10月17—19日路演，20分钟仅1页PPT","supportsInputs":[],"limits":"未公开详细评审权重，不把平台积分公式当作评委评分"},
+    {"id":"doe-method","type":"政府评价方法","date":"2022","url":"https://www.energy.gov/cmei/2022-grid-energy-storage-technology-cost-and-performance-assessment","claim":"评价纳入更换、退役与循环及日历寿命","supportsInputs":[],"limits":"采用费用结构，不移植美国2022年电池价格为中国2026年报价"},
+    {"id":"catl-sodium","type":"厂商披露","date":"2026-06-23","url":"https://www.catl.com/news/10052.html","claim":"15000次在25℃；−20℃容量保持率超过92%；辅源功耗披露与系统RTE改进为不同计量项目","supportsInputs":[],"limits":"不能证明−30℃15000次，也不能由RTE提升近2%得到两类产品绝对效率；辅源1%分母不足以转换成本模型日耗电"},
+    {"id":"hongying","type":"上市公司投资者活动记录","date":"2026-07-24","url":"https://static.cninfo.com.cn/finalpage/2026-07-24/1225441968.PDF","claim":"第3页公司称当前钠电电芯成本比LFP高40%—50%，理论长期可能低30%；提到15分钟备电用途","supportsInputs":[],"limits":"公司判断与电芯成本口径，未提供成交价、系统供货边界或兑现年份"},
+    {"id":"nature-cost","type":"同行评议电芯成本情景研究","date":"2025-01-13","url":"https://www.nature.com/articles/s41560-024-01701-9","claim":"Yao、Benson和Chueh评估材料、能量密度及供应链条件对价格竞争力的影响","supportsInputs":[],"limits":"论文明确限于电芯层级，不能直接给出AIDC系统成本与收益"},
+    {"id":"iea-sodium","type":"国际机构产业分析","date":"2026-02-17","url":"https://www.iea.org/commentaries/sodium-ion-battery-momentum-grows-but-challenges-remain","claim":"低温应用存在潜力，LFP成本与产业成熟度仍构成竞争压力","supportsInputs":[],"limits":"行业与代际资料，未提供本研究的配对产品性能与报价"},
+    {"id":"delta-ups","type":"厂商产品用途说明","date":"2026-10-14读取，页面未标发布日期","url":"https://www.deltapowersolutions.com/en/mcis/lbm-series-ups-battery-system-introduction.php","claim":"LBM磷酸铁锂UPS电池系统用于10—30分钟备电","supportsInputs":[],"limits":"仅说明LFP也有短时备电产品；不据此赋予4C、−30℃性能或采购价"},
+    {"id":"ndrc-demand","type":"政府历史计费结构说明","date":"2019-09-13","url":"https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=16504","claim":"说明容量、合同最大需量和实际最大需量计费方式的区别","supportsInputs":[],"limits":"只用于解释计费结构；2026年具体地区的现行电价、折扣、门槛与合同另行查证，40元为压力测试假设"},
+    {"id":"cospowers-lfp-product","type":"厂商LFP备电柜产品页","date":"2026-10-14读取","url":"https://www.cospowers.com/products/info/97/1619.html","claim":"CFS80085U的15分钟232kW、原表58kWh、3000次及0至45℃工作范围","supportsInputs":[],"supportsScreening":["目录条件整柜数量"],"limits":"循环温度及EOL不明，58kWh与768V×85Ah口径不同；20分钟网页与规格书不一致"},
+    {"id":"cospowers-lfp-sheet","type":"厂商LFP规格书，中文第1页","date":"2026-08上传路径；2026-10-14读取","url":"https://www.cospowers.com/web/upload/2026/08/13/17866123138164tut9b.pdf","claim":"15分钟功率232kW与网页一致；20分钟147kW与网页174kW不同","supportsInputs":[],"supportsScreening":["15分钟功率交叉核对"],"limits":"未标注温度、BOL/EOL或交流侧条件；不作−30℃性能证明"},
+    {"id":"cospowers-na-product","type":"厂商钠电备电柜产品页","date":"2026-10-14读取","url":"https://www.cospowers.com/products/info/136/1623.html","claim":"CNS80050U的15分钟121kW、37.05kWh、4000次及−20至60℃工作范围","supportsInputs":[],"supportsScreening":["目录条件整柜数量"],"limits":"−40℃是存储下限；未满足题设−30℃和15000次；效率提升3%未给绝对RTE"},
+    {"id":"cospowers-na-sheet","type":"厂商钠电规格书，中文第1页","date":"2026-08上传路径；2026-10-14读取","url":"https://www.cospowers.com/web/upload/2026/08/13/17866112719415eirh7.pdf","claim":"15分钟121kW及工作下限−20℃与网页一致","supportsInputs":[],"supportsScreening":["15分钟功率及工作温度交叉核对"],"limits":"测试温度、EOL、日历质保和报价缺失"},
+    {"id":"delta-lbm-spec","type":"厂商LFP UPS产品参数","date":"2026-10-14读取，页面未标发布日期","url":"https://www.deltapowersolutions.com/en/mcis/lbm-series-ups-battery-system-specifications.php","claim":"LBM-12标称43.5kWh、额定40.3kWh、200kW/10分钟BOL和5至35℃工作环境","supportsInputs":[],"supportsScreening":["额定能量下界"],"limits":"不能将10分钟BOL功率直接作为15分钟EOL可用功率"},
+    {"id":"delta-lbm-leaflet","type":"厂商LFP UPS产品规格书","date":"2026-10-14读取，文件未明确发布日期","url":"https://www.deltapowersolutions.com/media/download/Leaflet_UPS-Battery_LBM%20series_en_EKAICA-ESP-FH.pdf","claim":"额定能量、10分钟直流功率及>2500次1C/1C、25℃、EOL80%SOH","supportsInputs":[],"supportsScreening":["BOL和EOL计量条件"],"limits":"循环DoD未取得，不是本项目低温设计或采购报价"},
+    {"id":"highstar-aidc","type":"厂商AIDC产品披露","date":"2026年7月活动资料；2026-10-14读取","url":"https://cn.highstar.com/companynews/352","claim":"85Ah LFP持续12C，50Ah Na持续8C及−40至80℃工作范围","supportsInputs":[],"supportsScreening":["候选供应商与高倍率产品线"],"limits":"倍率和温度未绑定同一测试工况；脉冲次数不是完整深度循环"},
+    {"id":"highstar-cell","type":"厂商电芯目录","date":"2026-10-14读取","url":"https://cn.highstar.com/cell","claim":"50Ah Na参数表8C及8000(0.5c@70%)","supportsInputs":[],"supportsScreening":["候选型号"],"limits":"型号前缀NaCR/NaCP不一致，70%含义待澄清，不转为系统寿命"},
+    {"id":"renqiu-na-award","type":"政府最终中标结果，钠电标段","date":"2026-09-15","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002004/20260915/db2166c9-a5c5-48e9-b6ba-bbcfc2670499.html","claim":"宁德时代最终中标41416220元","supportsInputs":[],"supportsScreening":["历史成套设备价格"],"limits":"4小时40MWh电站，非AIDC短时或电池单独报价；税率与完整合同待核验"},
+    {"id":"renqiu-lfp-award","type":"政府最终中标结果，LFP标段","date":"2026-09-15","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002004/20260915/f9176493-3534-4e30-b3bf-8f74662fbc51.html","claim":"远景能源最终中标186480000元，与部分转载不同","supportsInputs":[],"supportsScreening":["历史成套设备价格"],"limits":"360MWh含两类LFP系统，规模与厂商不同，不能推导一般材料成本比"},
+    {"id":"renqiu-na-tender","type":"政府原始招标范围，钠电标段","date":"2026-08-07","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260807/b89f4e40-80b7-4e3a-a727-4fc63e80fa21.html","claim":"2.6至2.7明确10MW/40MWh及电池、BMS、消防、热管理、PCS、箱变、EMS、线缆与技术服务","supportsInputs":[],"supportsScreening":["价格归一化分母与供货范围"],"limits":"成套范围已含PCS等，不与电池单价相加；非全站EPC金额"},
+    {"id":"renqiu-lfp-tender","type":"政府原始招标范围，LFP标段","date":"2026-08-07","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260807/2233b878-5252-4270-a3c0-859635d5de7b.html","claim":"30MW/120MWh大容量加60MW/240MWh长寿命，供货范围与钠电标段同类","supportsInputs":[],"supportsScreening":["价格归一化分母与供货范围"],"limits":"寿命要求必须读取后续补遗；未取得完整中标SKU和合同"},
+    {"id":"renqiu-na-amendment","type":"政府钠电招标补遗","date":"2026-08-17","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260817/f5dd332f-4b72-4d9d-ac24-c400e2a36af1.html","claim":"调整测试认证要求及开标日期，其他内容不变","supportsInputs":[],"supportsScreening":["招标版本核对"],"limits":"补遗不是实测报告"},
+    {"id":"renqiu-lfp-amendment","type":"政府LFP招标补遗","date":"2026-08-17","url":"https://szj.hebei.gov.cn/hbggfwpt/jydt/003001/003001002/003001002001/20260817/a12601dc-ef29-42e8-983c-3b3c64af44ae.html","claim":"长寿命要求修改为≥7000次，25℃、90%DoD、70%EOL，或15年日历寿命≥70%EOL","supportsInputs":[],"supportsScreening":["生效技术门槛"],"limits":"招标门槛不能当作中标产品实测寿命；不沿用旧10000次或20年条件"}
+  ],
+  "excluded": [
+    {"item":"把任丘成套中标单价填入电池单价，再叠加PCS及温控","reason":"原始公告已取得且范围含PCS等，直接套用会重复计价并混淆4小时电站与短时AIDC任务"},
+    {"item":"转载的任丘LFP总额194616000元","reason":"政府最终原文为186480000元；转载金额与0.518元/Wh算术不符"},
+    {"item":"昆宇LFP20分钟功率","reason":"网页174kW、中文规格书147kW，等待厂商澄清；只采用两处一致的15分钟字段"},
+    {"item":"其他参赛者的演示参数","reason":"作为公开研究讨论阅读，不作为厂商或官方数据"},
+    {"item":"未经定义的辅源百分比与RTE提升百分比","reason":"计量分母和绝对效率缺失，不能转换为本模型的日辅助耗电及RTE"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+ "concept": "concept.png", "nativeViewport": {"width":1536,"height":1024},
+ "tokens": {"background":"#f4f6f5","surface":"#ffffff","ink":"#172922","accent":"#155a46","comparison":"#71819a","border":"#e2e7e5","radius":6},
+ "layout": "64px header; 32px page gutters; 380px parameter rail; 14px grid gap; metrics, chart, then cost table",
+ "typography": "Segoe UI, Microsoft YaHei, sans-serif; 24px title; 20px section; 16px controls; 14px helper",
+ "copy": ["钠电经济试验台","经济比较","逐时运行","数据与证据","导出场景","运行比较","同一供电任务，比较长期成本与采购边界。","当前使用题设与演示假设，结果用于验证方法。","场景设置","题设解释","电池参数","长期费用差额","钠电报价分界","应急备用电量","累计费用","费用拆分"],
+ "intentionalFunctionalDeviations": ["图表使用真实计算的费用曲线与更换跳点，替换设计稿的示意曲线","金额占位文字替换为真实计算值","高级参数折叠区、导出结果、CSV与JSON导入用于可复算要求","结果随计算更新，参数更改时提示需要重新运行","增加可查验的约束、参数来源、方法与局限","手机布局按同一设计系统纵向堆叠"],
+ "assetTreatment": "仅设计参考；界面、表格及SVG图表全部由代码实现；无位图覆盖、渐变或装饰图标"
+}

@@ -1,0 +1,38 @@
+{
+  "author": "WeiR-h",
+  "toolVersion": "0.3.0",
+  "evidenceType": "local-rehearsal-not-platform-or-business-proof",
+  "summary": {
+    "incomeCents": 10000,
+    "expenseCents": 2000,
+    "balanceCents": 8000,
+    "positiveBalanceCents": 8000,
+    "pendingIncomeCents": 0,
+    "pendingExpenseCents": 0
+  },
+  "trial": {
+    "poolCents": 8000,
+    "allocatedCents": 8000,
+    "unallocatedCents": 0,
+    "rows": [
+      {
+        "contributor": "演练贡献者乙",
+        "pointsMicro": 3000000,
+        "amountCents": 6000,
+        "share": 0.75
+      },
+      {
+        "contributor": "演练贡献者甲",
+        "pointsMicro": 1000000,
+        "amountCents": 2000,
+        "share": 0.25
+      }
+    ],
+    "status": "hypothetical-manually-recorded-points",
+    "settlement": false
+  },
+  "actualExternalParticipants": 0,
+  "actualOperatingIncomeRMB": 0,
+  "platformSync": false,
+  "settlement": false
+}

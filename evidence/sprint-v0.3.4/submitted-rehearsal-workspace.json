@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "projectId": "cmujvb96f000z3jo188jx0xjp",
+  "author": "WeiR-h",
+  "dataStatus": "rehearsal",
+  "sequence": 2,
+  "tasks": [
+    {
+      "id": "paired-quotes",
+      "title": "补齐同任务配对报价",
+      "question": "同一交流侧1MW、15分钟任务，分别取得LFP与钠电预算报价。",
+      "acceptance": "两份报价及型号明确；列明温度、寿命终点、含税范围、UPS/PCS和温控是否包含。",
+      "checks": [
+        "同任务及型号明确",
+        "来源与日期可追溯",
+        "供货边界和缺口已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "power-curves",
+      "title": "核对15分钟功率与低温条件",
+      "question": "澄清昆宇5/9柜初筛的测试工况，以及−30℃部署需要的条件。",
+      "acceptance": "厂商书面答复或测试报告，明确温度、寿命终点、直流/交流边界及柜数修正。",
+      "checks": [
+        "测试条件可追溯",
+        "目录矛盾已保留或解决",
+        "对柜数结论的影响已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "model-review",
+      "title": "独立复算经济模型",
+      "question": "复算需量费反例、备用约束、更换时点和现金流。",
+      "acceptance": "独立复算过程，保留输入、模型版本、差异与复核结果。",
+      "checks": [
+        "输入及版本已记录",
+        "复算过程可重复",
+        "差异及结论已说明"
+      ],
+      "status": "open",
+      "claimant": null
+    },
+    {
+      "id": "monthly-load",
+      "title": "补充真实月度负荷与计费",
+      "question": "获取可分享的匿名15分钟负荷和一个完整月的计费依据。",
+      "acceptance": "明确数据授权、计费类型、记录时段、缺失数据和实际峰值；不公开客户敏感字段。",
+      "checks": [
+        "数据使用范围明确",
+        "负荷与账单口径一致",
+        "模型可用性及缺口已说明"
+      ],
+      "status": "submitted",
+      "claimant": "演练贡献者"
+    },
+    {
+      "id": "user-feedback",
+      "title": "验证一次实际使用需求",
+      "question": "请AIDC业主或集成商试用选型比较，并记录实际用途。",
+      "acceptance": "可引用的使用反馈，说明是否影响选型、减少重复计价或发现约束。",
+      "checks": [
+        "反馈来源及授权明确",
+        "具体用途与结果明确",
+        "付费意向与实际收入分开记录"
+      ],
+      "status": "open",
+      "claimant": null
+    }
+  ],
+  "contributions": [
+    {
+      "id": "contribution-2",
+      "taskId": "monthly-load",
+      "contributor": "演练贡献者",
+      "revision": 1,
+      "question": "获取可分享的匿名15分钟负荷和一个完整月的计费依据。",
+      "summary": "合成样例回放验证，非现场资料",
+      "source": "https://1836.online/projects/cmujvb96f000z3jo188jx0xjp",
+      "impact": "仅验证资料质检、复算关联与摘要，非外部共建",
+      "modelVersion": "0.2.0",
+      "shareAllowed": true,
+      "status": "submitted",
+      "submittedAt": "2026-10-16T12:00:00.000Z",
+      "reviews": []
+    }
+  ],
+  "pointRecords": [],
+  "commercialEntries": [],
+  "events": [
+    {
+      "id": "event-1",
+      "kind": "claim",
+      "actor": "演练贡献者",
+      "detail": "monthly-load",
+      "at": "2026-10-16T12:00:00.000Z"
+    },
+    {
+      "id": "event-2",
+      "kind": "submit",
+      "actor": "演练贡献者",
+      "detail": "contribution-2",
+      "at": "2026-10-16T12:00:00.000Z"
+    }
+  ],
+  "analysisRecords": [],
+  "scope": {
+    "storage": "local",
+    "platformSync": false,
+    "authenticatedIdentity": false,
+    "settlement": false
+  }
+}

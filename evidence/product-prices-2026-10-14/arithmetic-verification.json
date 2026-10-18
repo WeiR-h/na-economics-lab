@@ -1,0 +1,48 @@
+{
+  "author": "WeiR-h",
+  "assertions": [
+    {
+      "name": "LFP minimum cabinet count and one-less infeasibility",
+      "passed": true
+    },
+    {
+      "name": "Na minimum cabinet count and one-less infeasibility",
+      "passed": true
+    },
+    {
+      "name": "Per-cabinet quote boundary",
+      "passed": true
+    },
+    {
+      "name": "Na award normalization",
+      "passed": true
+    },
+    {
+      "name": "LFP award normalization",
+      "passed": true
+    },
+    {
+      "name": "Secondary reported total cannot yield 518 RMB/kWh",
+      "passed": true
+    },
+    {
+      "name": "Both awards are four-hour systems",
+      "passed": true
+    },
+    {
+      "name": "Operating temperature does not use storage temperature",
+      "passed": true
+    },
+    {
+      "name": "No integrated award becomes battery-only price",
+      "passed": true
+    },
+    {
+      "name": "LFP nominal field discrepancy retained",
+      "passed": true
+    }
+  ],
+  "count": 10,
+  "input": "data/product-price-register-2026-10-14.json",
+  "evidenceType": "public-source-arithmetic-not-field-test"
+}

@@ -1,0 +1,27 @@
+{
+  "author": "WeiR-h",
+  "roadshowRevision": "v1.4",
+  "date": "2026-10-16",
+  "researchRevision": "v1.3",
+  "toolVersion": "0.3.1",
+  "modelVersion": "0.2.0",
+  "source": "evidence/research-v1/research-results.json#demandSweep",
+  "policy": "min-peak",
+  "unit": "万元",
+  "categories": [
+    "未计需量费",
+    "计入需量费"
+  ],
+  "values": [
+    43.65,
+    -123.31
+  ],
+  "monthlyDemandRateRMBPerKWMonth": [
+    0,
+    40
+  ],
+  "dataStatus": "conditional-model-not-operating-income",
+  "sameForBothTechnologies": true,
+  "reliabilityBenefitsIncluded": false,
+  "personalBackgroundIncluded": false
+}
